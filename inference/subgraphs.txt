@@ -1,0 +1,412 @@
+ order
+0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 52 54 56 58 60 62 64 66 68 70 72 74 76 78 80 3 1 5 7 9 11 13 15 17 19 21 23 25 27 29 31 33 35 37 39 41 43 45 47 49 51 53 55 57 59 61 63 65 67 69 71 73 75 77 79 81 
+NPUsubgraph0: order0
+Inputs:sample; size:1 4 32 32 
+Outputs:/down_blocks.0/resnets.0/norm1/Reshape_output_0; size:1 32 10240 /conv_in/Conv_output_0; size:1 320 32 32 
+ The predecessors of NPUsubgraph0: 
+ The successors of NPUsubgraph0: CPUsubgraph1; CPUsubgraph2; CPUsubgraph36; 
+NPUsubgraph1: order2
+Inputs:/down_blocks.0/resnets.0/norm1/InstanceNormalization_output_0; size:1 32 10240 
+Outputs:/down_blocks.0/resnets.0/conv1/Conv_output_0; size:1 320 32 32 
+ The predecessors of NPUsubgraph1: CPUsubgraph1; 
+ The successors of NPUsubgraph1: CPUsubgraph0; 
+NPUsubgraph2: order4
+Inputs:/down_blocks.0/resnets.0/norm2/InstanceNormalization_output_0; size:1 32 10240 
+Outputs:/down_blocks.0/resnets.0/conv2/Conv_output_0; size:1 320 32 32 
+ The predecessors of NPUsubgraph2: CPUsubgraph0; 
+ The successors of NPUsubgraph2: CPUsubgraph2; 
+NPUsubgraph3: order6
+Inputs:/down_blocks.0/attentions.0/norm/Reshape_1_output_0; size:1 320 32 32 
+Outputs:/down_blocks.0/attentions.0/proj_in/Conv_output_0; size:1 320 32 32 
+ The predecessors of NPUsubgraph3: CPUsubgraph2; 
+ The successors of NPUsubgraph3: CPUsubgraph3; 
+NPUsubgraph4: order8
+Inputs:/down_blocks.0/attentions.0/Transpose_1_output_0; size:1 320 32 32 
+Outputs:/down_blocks.0/attentions.0/proj_out/Conv_output_0; size:1 320 32 32 
+ The predecessors of NPUsubgraph4: CPUsubgraph3; 
+ The successors of NPUsubgraph4: CPUsubgraph4; 
+NPUsubgraph5: order10
+Inputs:/down_blocks.0/attentions.0/Add_output_0; size:1 320 32 32 
+Outputs:/down_blocks.1/resnets.0/norm1/Reshape_output_0; size:1 32 2560 /down_blocks.0/downsamplers.0/conv/Conv_output_0; size:1 320 16 16 
+ The predecessors of NPUsubgraph5: CPUsubgraph4; 
+ The successors of NPUsubgraph5: NPUsubgraph7; CPUsubgraph5; CPUsubgraph27; 
+NPUsubgraph6: order12
+Inputs:/down_blocks.1/resnets.0/norm1/InstanceNormalization_output_0; size:1 32 2560 
+Outputs:/down_blocks.1/resnets.0/conv1/Conv_output_0; size:1 640 16 16 
+ The predecessors of NPUsubgraph6: CPUsubgraph5; 
+ The successors of NPUsubgraph6: CPUsubgraph6; 
+NPUsubgraph7: order14
+Inputs:/down_blocks.0/downsamplers.0/conv/Conv_output_0; size:1 320 16 16 /down_blocks.1/resnets.0/norm2/InstanceNormalization_output_0; size:1 32 5120 
+Outputs:/down_blocks.1/attentions.0/norm/Reshape_output_0; size:1 32 5120 /down_blocks.1/resnets.0/Add_1_output_0; size:1 640 16 16 
+ The predecessors of NPUsubgraph7: NPUsubgraph5; CPUsubgraph6; 
+ The successors of NPUsubgraph7: CPUsubgraph7; CPUsubgraph9; 
+NPUsubgraph8: order16
+Inputs:/down_blocks.1/attentions.0/norm/Reshape_1_output_0; size:1 640 16 16 
+Outputs:/down_blocks.1/attentions.0/proj_in/Conv_output_0; size:1 640 16 16 
+ The predecessors of NPUsubgraph8: CPUsubgraph7; 
+ The successors of NPUsubgraph8: CPUsubgraph8; 
+NPUsubgraph9: order18
+Inputs:/down_blocks.1/attentions.0/Transpose_1_output_0; size:1 640 16 16 
+Outputs:/down_blocks.1/attentions.0/proj_out/Conv_output_0; size:1 640 16 16 
+ The predecessors of NPUsubgraph9: CPUsubgraph8; 
+ The successors of NPUsubgraph9: CPUsubgraph9; 
+NPUsubgraph10: order20
+Inputs:/down_blocks.1/attentions.0/Add_output_0; size:1 640 16 16 
+Outputs:/down_blocks.2/resnets.0/norm1/Reshape_output_0; size:1 32 1280 /down_blocks.1/downsamplers.0/conv/Conv_output_0; size:1 640 8 8 
+ The predecessors of NPUsubgraph10: CPUsubgraph9; 
+ The successors of NPUsubgraph10: NPUsubgraph12; CPUsubgraph10; CPUsubgraph18; 
+NPUsubgraph11: order22
+Inputs:/down_blocks.2/resnets.0/norm1/InstanceNormalization_output_0; size:1 32 1280 
+Outputs:/down_blocks.2/resnets.0/conv1/Conv_output_0; size:1 1280 8 8 
+ The predecessors of NPUsubgraph11: CPUsubgraph10; 
+ The successors of NPUsubgraph11: CPUsubgraph11; 
+NPUsubgraph12: order24
+Inputs:/down_blocks.1/downsamplers.0/conv/Conv_output_0; size:1 640 8 8 /down_blocks.2/resnets.0/norm2/InstanceNormalization_output_0; size:1 32 2560 
+Outputs:/down_blocks.2/attentions.0/norm/Reshape_output_0; size:1 32 2560 /down_blocks.2/resnets.0/Add_1_output_0; size:1 1280 8 8 
+ The predecessors of NPUsubgraph12: NPUsubgraph10; CPUsubgraph11; 
+ The successors of NPUsubgraph12: CPUsubgraph12; CPUsubgraph14; 
+NPUsubgraph13: order26
+Inputs:/down_blocks.2/attentions.0/norm/Reshape_1_output_0; size:1 1280 8 8 
+Outputs:/down_blocks.2/attentions.0/proj_in/Conv_output_0; size:1 1280 8 8 
+ The predecessors of NPUsubgraph13: CPUsubgraph12; 
+ The successors of NPUsubgraph13: CPUsubgraph13; 
+NPUsubgraph14: order28
+Inputs:/down_blocks.2/attentions.0/Transpose_1_output_0; size:1 1280 8 8 
+Outputs:/down_blocks.2/attentions.0/proj_out/Conv_output_0; size:1 1280 8 8 
+ The predecessors of NPUsubgraph14: CPUsubgraph13; 
+ The successors of NPUsubgraph14: CPUsubgraph14; 
+NPUsubgraph15: order30
+Inputs:/up_blocks.0/resnets.0/norm1/InstanceNormalization_output_0; size:1 32 5120 
+Outputs:/up_blocks.0/resnets.0/conv1/Conv_output_0; size:1 1280 8 8 
+ The predecessors of NPUsubgraph15: CPUsubgraph14; 
+ The successors of NPUsubgraph15: CPUsubgraph15; 
+NPUsubgraph16: order32
+Inputs:/up_blocks.0/Concat_output_0; size:1 2560 8 8 /up_blocks.0/resnets.0/norm2/InstanceNormalization_output_0; size:1 32 2560 
+Outputs:/up_blocks.0/attentions.0/norm/Reshape_output_0; size:1 32 2560 /up_blocks.0/resnets.0/Add_1_output_0; size:1 1280 8 8 
+ The predecessors of NPUsubgraph16: CPUsubgraph14; CPUsubgraph15; 
+ The successors of NPUsubgraph16: CPUsubgraph16; CPUsubgraph18; 
+NPUsubgraph17: order34
+Inputs:/up_blocks.0/attentions.0/norm/Reshape_1_output_0; size:1 1280 8 8 
+Outputs:/up_blocks.0/attentions.0/proj_in/Conv_output_0; size:1 1280 8 8 
+ The predecessors of NPUsubgraph17: CPUsubgraph16; 
+ The successors of NPUsubgraph17: CPUsubgraph17; 
+NPUsubgraph18: order36
+Inputs:/up_blocks.0/attentions.0/Transpose_1_output_0; size:1 1280 8 8 
+Outputs:/up_blocks.0/attentions.0/proj_out/Conv_output_0; size:1 1280 8 8 
+ The predecessors of NPUsubgraph18: CPUsubgraph17; 
+ The successors of NPUsubgraph18: CPUsubgraph18; 
+NPUsubgraph19: order38
+Inputs:/up_blocks.0/resnets.1/norm1/InstanceNormalization_output_0; size:1 32 3840 
+Outputs:/up_blocks.0/resnets.1/conv1/Conv_output_0; size:1 1280 8 8 
+ The predecessors of NPUsubgraph19: CPUsubgraph18; 
+ The successors of NPUsubgraph19: CPUsubgraph19; 
+NPUsubgraph20: order40
+Inputs:/up_blocks.0/Concat_1_output_0; size:1 1920 8 8 /up_blocks.0/resnets.1/norm2/InstanceNormalization_output_0; size:1 32 2560 
+Outputs:/up_blocks.0/attentions.1/norm/Reshape_output_0; size:1 32 2560 /up_blocks.0/resnets.1/Add_1_output_0; size:1 1280 8 8 
+ The predecessors of NPUsubgraph20: CPUsubgraph18; CPUsubgraph19; 
+ The successors of NPUsubgraph20: CPUsubgraph20; CPUsubgraph22; 
+NPUsubgraph21: order42
+Inputs:/up_blocks.0/attentions.1/norm/Reshape_1_output_0; size:1 1280 8 8 
+Outputs:/up_blocks.0/attentions.1/proj_in/Conv_output_0; size:1 1280 8 8 
+ The predecessors of NPUsubgraph21: CPUsubgraph20; 
+ The successors of NPUsubgraph21: CPUsubgraph21; 
+NPUsubgraph22: order44
+Inputs:/up_blocks.0/attentions.1/Transpose_1_output_0; size:1 1280 8 8 
+Outputs:/up_blocks.0/attentions.1/proj_out/Conv_output_0; size:1 1280 8 8 
+ The predecessors of NPUsubgraph22: CPUsubgraph21; 
+ The successors of NPUsubgraph22: CPUsubgraph22; 
+NPUsubgraph23: order46
+Inputs:/up_blocks.0/upsamplers.0/Resize_output_0; size:1 1280 16 16 
+Outputs:/up_blocks.0/upsamplers.0/conv/Conv_output_0; size:1 1280 16 16 
+ The predecessors of NPUsubgraph23: CPUsubgraph22; 
+ The successors of NPUsubgraph23: CPUsubgraph23; 
+NPUsubgraph24: order48
+Inputs:/up_blocks.1/resnets.0/norm1/InstanceNormalization_output_0; size:1 32 15360 
+Outputs:/up_blocks.1/resnets.0/conv1/Conv_output_0; size:1 640 16 16 
+ The predecessors of NPUsubgraph24: CPUsubgraph23; 
+ The successors of NPUsubgraph24: CPUsubgraph24; 
+NPUsubgraph25: order50
+Inputs:/up_blocks.1/Concat_output_0; size:1 1920 16 16 /up_blocks.1/resnets.0/norm2/InstanceNormalization_output_0; size:1 32 5120 
+Outputs:/up_blocks.1/attentions.0/norm/Reshape_output_0; size:1 32 5120 /up_blocks.1/resnets.0/Add_1_output_0; size:1 640 16 16 
+ The predecessors of NPUsubgraph25: CPUsubgraph23; CPUsubgraph24; 
+ The successors of NPUsubgraph25: CPUsubgraph25; CPUsubgraph27; 
+NPUsubgraph26: order52
+Inputs:/up_blocks.1/attentions.0/norm/Reshape_1_output_0; size:1 640 16 16 
+Outputs:/up_blocks.1/attentions.0/proj_in/Conv_output_0; size:1 640 16 16 
+ The predecessors of NPUsubgraph26: CPUsubgraph25; 
+ The successors of NPUsubgraph26: CPUsubgraph26; 
+NPUsubgraph27: order54
+Inputs:/up_blocks.1/attentions.0/Transpose_1_output_0; size:1 640 16 16 
+Outputs:/up_blocks.1/attentions.0/proj_out/Conv_output_0; size:1 640 16 16 
+ The predecessors of NPUsubgraph27: CPUsubgraph26; 
+ The successors of NPUsubgraph27: CPUsubgraph27; 
+NPUsubgraph28: order56
+Inputs:/up_blocks.1/resnets.1/norm1/InstanceNormalization_output_0; size:1 32 7680 
+Outputs:/up_blocks.1/resnets.1/conv1/Conv_output_0; size:1 640 16 16 
+ The predecessors of NPUsubgraph28: CPUsubgraph27; 
+ The successors of NPUsubgraph28: CPUsubgraph28; 
+NPUsubgraph29: order58
+Inputs:/up_blocks.1/Concat_1_output_0; size:1 960 16 16 /up_blocks.1/resnets.1/norm2/InstanceNormalization_output_0; size:1 32 5120 
+Outputs:/up_blocks.1/attentions.1/norm/Reshape_output_0; size:1 32 5120 /up_blocks.1/resnets.1/Add_1_output_0; size:1 640 16 16 
+ The predecessors of NPUsubgraph29: CPUsubgraph27; CPUsubgraph28; 
+ The successors of NPUsubgraph29: CPUsubgraph29; CPUsubgraph31; 
+NPUsubgraph30: order60
+Inputs:/up_blocks.1/attentions.1/norm/Reshape_1_output_0; size:1 640 16 16 
+Outputs:/up_blocks.1/attentions.1/proj_in/Conv_output_0; size:1 640 16 16 
+ The predecessors of NPUsubgraph30: CPUsubgraph29; 
+ The successors of NPUsubgraph30: CPUsubgraph30; 
+NPUsubgraph31: order62
+Inputs:/up_blocks.1/attentions.1/Transpose_1_output_0; size:1 640 16 16 
+Outputs:/up_blocks.1/attentions.1/proj_out/Conv_output_0; size:1 640 16 16 
+ The predecessors of NPUsubgraph31: CPUsubgraph30; 
+ The successors of NPUsubgraph31: CPUsubgraph31; 
+NPUsubgraph32: order64
+Inputs:/up_blocks.1/upsamplers.0/Resize_output_0; size:1 640 32 32 
+Outputs:/up_blocks.1/upsamplers.0/conv/Conv_output_0; size:1 640 32 32 
+ The predecessors of NPUsubgraph32: CPUsubgraph31; 
+ The successors of NPUsubgraph32: CPUsubgraph32; 
+NPUsubgraph33: order66
+Inputs:/up_blocks.2/resnets.0/norm1/InstanceNormalization_output_0; size:1 32 30720 
+Outputs:/up_blocks.2/resnets.0/conv1/Conv_output_0; size:1 320 32 32 
+ The predecessors of NPUsubgraph33: CPUsubgraph32; 
+ The successors of NPUsubgraph33: CPUsubgraph33; 
+NPUsubgraph34: order68
+Inputs:/up_blocks.2/Concat_output_0; size:1 960 32 32 /up_blocks.2/resnets.0/norm2/InstanceNormalization_output_0; size:1 32 10240 
+Outputs:/up_blocks.2/attentions.0/norm/Reshape_output_0; size:1 32 10240 /up_blocks.2/resnets.0/Add_1_output_0; size:1 320 32 32 
+ The predecessors of NPUsubgraph34: CPUsubgraph32; CPUsubgraph33; 
+ The successors of NPUsubgraph34: CPUsubgraph34; CPUsubgraph36; 
+NPUsubgraph35: order70
+Inputs:/up_blocks.2/attentions.0/norm/Reshape_1_output_0; size:1 320 32 32 
+Outputs:/up_blocks.2/attentions.0/proj_in/Conv_output_0; size:1 320 32 32 
+ The predecessors of NPUsubgraph35: CPUsubgraph34; 
+ The successors of NPUsubgraph35: CPUsubgraph35; 
+NPUsubgraph36: order72
+Inputs:/up_blocks.2/attentions.0/Transpose_1_output_0; size:1 320 32 32 
+Outputs:/up_blocks.2/attentions.0/proj_out/Conv_output_0; size:1 320 32 32 
+ The predecessors of NPUsubgraph36: CPUsubgraph35; 
+ The successors of NPUsubgraph36: CPUsubgraph36; 
+NPUsubgraph37: order74
+Inputs:/up_blocks.2/resnets.1/norm1/InstanceNormalization_output_0; size:1 32 20480 
+Outputs:/up_blocks.2/resnets.1/conv1/Conv_output_0; size:1 320 32 32 
+ The predecessors of NPUsubgraph37: CPUsubgraph36; 
+ The successors of NPUsubgraph37: CPUsubgraph37; 
+NPUsubgraph38: order76
+Inputs:/up_blocks.2/Concat_1_output_0; size:1 640 32 32 /up_blocks.2/resnets.1/norm2/InstanceNormalization_output_0; size:1 32 10240 
+Outputs:/up_blocks.2/attentions.1/norm/Reshape_output_0; size:1 32 10240 /up_blocks.2/resnets.1/Add_1_output_0; size:1 320 32 32 
+ The predecessors of NPUsubgraph38: CPUsubgraph36; CPUsubgraph37; 
+ The successors of NPUsubgraph38: CPUsubgraph38; CPUsubgraph40; 
+NPUsubgraph39: order78
+Inputs:/up_blocks.2/attentions.1/norm/Reshape_1_output_0; size:1 320 32 32 
+Outputs:/up_blocks.2/attentions.1/proj_in/Conv_output_0; size:1 320 32 32 
+ The predecessors of NPUsubgraph39: CPUsubgraph38; 
+ The successors of NPUsubgraph39: CPUsubgraph39; 
+NPUsubgraph40: order80
+Inputs:/up_blocks.2/attentions.1/Transpose_1_output_0; size:1 320 32 32 
+Outputs:/up_blocks.2/attentions.1/proj_out/Conv_output_0; size:1 320 32 32 
+ The predecessors of NPUsubgraph40: CPUsubgraph39; 
+ The successors of NPUsubgraph40: CPUsubgraph40; 
+CPUsubgraph0: order3
+Inputs:/down_blocks.0/resnets.0/conv1/Conv_output_0; size:1 320 32 32 timestep; size:1 
+Outputs:/down_blocks.0/resnets.0/norm2/InstanceNormalization_output_0; size:1 32 10240 /down_blocks.0/resnets.0/act_1/Mul_output_0; size:1 1280 
+ The predecessors of CPUsubgraph0: NPUsubgraph1; 
+ The successors of CPUsubgraph0: NPUsubgraph2; CPUsubgraph6; CPUsubgraph11; CPUsubgraph15; CPUsubgraph19; CPUsubgraph24; CPUsubgraph28; CPUsubgraph33; CPUsubgraph37; 
+CPUsubgraph1: order1
+Inputs:/down_blocks.0/resnets.0/norm1/Reshape_output_0; size:1 32 10240 
+Outputs:/down_blocks.0/resnets.0/norm1/InstanceNormalization_output_0; size:1 32 10240 
+ The predecessors of CPUsubgraph1: NPUsubgraph0; 
+ The successors of CPUsubgraph1: NPUsubgraph1; 
+CPUsubgraph2: order5
+Inputs:/down_blocks.0/resnets.0/conv2/Conv_output_0; size:1 320 32 32 /conv_in/Conv_output_0; size:1 320 32 32 
+Outputs:/down_blocks.0/attentions.0/norm/Reshape_1_output_0; size:1 320 32 32 /down_blocks.0/resnets.0/Add_1_output_0; size:1 320 32 32 
+ The predecessors of CPUsubgraph2: NPUsubgraph2; NPUsubgraph0; 
+ The successors of CPUsubgraph2: NPUsubgraph3; CPUsubgraph4; 
+CPUsubgraph3: order7
+Inputs:encoder_hidden_states; size:1 77 768 /down_blocks.0/attentions.0/proj_in/Conv_output_0; size:1 320 32 32 
+Outputs:/down_blocks.0/attentions.0/Transpose_1_output_0; size:1 320 32 32 
+ The predecessors of CPUsubgraph3: NPUsubgraph3; 
+ The successors of CPUsubgraph3: NPUsubgraph4; 
+CPUsubgraph4: order9
+Inputs:/down_blocks.0/resnets.0/Add_1_output_0; size:1 320 32 32 /down_blocks.0/attentions.0/proj_out/Conv_output_0; size:1 320 32 32 
+Outputs:/down_blocks.0/attentions.0/Add_output_0; size:1 320 32 32 
+ The predecessors of CPUsubgraph4: CPUsubgraph2; NPUsubgraph4; 
+ The successors of CPUsubgraph4: NPUsubgraph5; CPUsubgraph32; 
+CPUsubgraph5: order11
+Inputs:/down_blocks.1/resnets.0/norm1/Reshape_output_0; size:1 32 2560 
+Outputs:/down_blocks.1/resnets.0/norm1/InstanceNormalization_output_0; size:1 32 2560 
+ The predecessors of CPUsubgraph5: NPUsubgraph5; 
+ The successors of CPUsubgraph5: NPUsubgraph6; 
+CPUsubgraph6: order13
+Inputs:/down_blocks.1/resnets.0/conv1/Conv_output_0; size:1 640 16 16 /down_blocks.0/resnets.0/act_1/Mul_output_0; size:1 1280 
+Outputs:/down_blocks.1/resnets.0/norm2/InstanceNormalization_output_0; size:1 32 5120 
+ The predecessors of CPUsubgraph6: NPUsubgraph6; CPUsubgraph0; 
+ The successors of CPUsubgraph6: NPUsubgraph7; 
+CPUsubgraph7: order15
+Inputs:/down_blocks.1/attentions.0/norm/Reshape_output_0; size:1 32 5120 
+Outputs:/down_blocks.1/attentions.0/norm/Reshape_1_output_0; size:1 640 16 16 
+ The predecessors of CPUsubgraph7: NPUsubgraph7; 
+ The successors of CPUsubgraph7: NPUsubgraph8; 
+CPUsubgraph8: order17
+Inputs:encoder_hidden_states; size:1 77 768 /down_blocks.1/attentions.0/proj_in/Conv_output_0; size:1 640 16 16 
+Outputs:/down_blocks.1/attentions.0/Transpose_1_output_0; size:1 640 16 16 
+ The predecessors of CPUsubgraph8: NPUsubgraph8; 
+ The successors of CPUsubgraph8: NPUsubgraph9; 
+CPUsubgraph9: order19
+Inputs:/down_blocks.1/resnets.0/Add_1_output_0; size:1 640 16 16 /down_blocks.1/attentions.0/proj_out/Conv_output_0; size:1 640 16 16 
+Outputs:/down_blocks.1/attentions.0/Add_output_0; size:1 640 16 16 
+ The predecessors of CPUsubgraph9: NPUsubgraph7; NPUsubgraph9; 
+ The successors of CPUsubgraph9: NPUsubgraph10; CPUsubgraph23; 
+CPUsubgraph10: order21
+Inputs:/down_blocks.2/resnets.0/norm1/Reshape_output_0; size:1 32 1280 
+Outputs:/down_blocks.2/resnets.0/norm1/InstanceNormalization_output_0; size:1 32 1280 
+ The predecessors of CPUsubgraph10: NPUsubgraph10; 
+ The successors of CPUsubgraph10: NPUsubgraph11; 
+CPUsubgraph11: order23
+Inputs:/down_blocks.2/resnets.0/conv1/Conv_output_0; size:1 1280 8 8 /down_blocks.0/resnets.0/act_1/Mul_output_0; size:1 1280 
+Outputs:/down_blocks.2/resnets.0/norm2/InstanceNormalization_output_0; size:1 32 2560 
+ The predecessors of CPUsubgraph11: NPUsubgraph11; CPUsubgraph0; 
+ The successors of CPUsubgraph11: NPUsubgraph12; 
+CPUsubgraph12: order25
+Inputs:/down_blocks.2/attentions.0/norm/Reshape_output_0; size:1 32 2560 
+Outputs:/down_blocks.2/attentions.0/norm/Reshape_1_output_0; size:1 1280 8 8 
+ The predecessors of CPUsubgraph12: NPUsubgraph12; 
+ The successors of CPUsubgraph12: NPUsubgraph13; 
+CPUsubgraph13: order27
+Inputs:encoder_hidden_states; size:1 77 768 /down_blocks.2/attentions.0/proj_in/Conv_output_0; size:1 1280 8 8 
+Outputs:/down_blocks.2/attentions.0/Transpose_1_output_0; size:1 1280 8 8 
+ The predecessors of CPUsubgraph13: NPUsubgraph13; 
+ The successors of CPUsubgraph13: NPUsubgraph14; 
+CPUsubgraph14: order29
+Inputs:/down_blocks.2/resnets.0/Add_1_output_0; size:1 1280 8 8 /down_blocks.2/attentions.0/proj_out/Conv_output_0; size:1 1280 8 8 
+Outputs:/up_blocks.0/resnets.0/norm1/InstanceNormalization_output_0; size:1 32 5120 /up_blocks.0/Concat_output_0; size:1 2560 8 8 
+ The predecessors of CPUsubgraph14: NPUsubgraph12; NPUsubgraph14; 
+ The successors of CPUsubgraph14: NPUsubgraph15; NPUsubgraph16; 
+CPUsubgraph15: order31
+Inputs:/up_blocks.0/resnets.0/conv1/Conv_output_0; size:1 1280 8 8 /down_blocks.0/resnets.0/act_1/Mul_output_0; size:1 1280 
+Outputs:/up_blocks.0/resnets.0/norm2/InstanceNormalization_output_0; size:1 32 2560 
+ The predecessors of CPUsubgraph15: NPUsubgraph15; CPUsubgraph0; 
+ The successors of CPUsubgraph15: NPUsubgraph16; 
+CPUsubgraph16: order33
+Inputs:/up_blocks.0/attentions.0/norm/Reshape_output_0; size:1 32 2560 
+Outputs:/up_blocks.0/attentions.0/norm/Reshape_1_output_0; size:1 1280 8 8 
+ The predecessors of CPUsubgraph16: NPUsubgraph16; 
+ The successors of CPUsubgraph16: NPUsubgraph17; 
+CPUsubgraph17: order35
+Inputs:encoder_hidden_states; size:1 77 768 /up_blocks.0/attentions.0/proj_in/Conv_output_0; size:1 1280 8 8 
+Outputs:/up_blocks.0/attentions.0/Transpose_1_output_0; size:1 1280 8 8 
+ The predecessors of CPUsubgraph17: NPUsubgraph17; 
+ The successors of CPUsubgraph17: NPUsubgraph18; 
+CPUsubgraph18: order37
+Inputs:/up_blocks.0/resnets.0/Add_1_output_0; size:1 1280 8 8 /down_blocks.1/downsamplers.0/conv/Conv_output_0; size:1 640 8 8 /up_blocks.0/attentions.0/proj_out/Conv_output_0; size:1 1280 8 8 
+Outputs:/up_blocks.0/resnets.1/norm1/InstanceNormalization_output_0; size:1 32 3840 /up_blocks.0/Concat_1_output_0; size:1 1920 8 8 
+ The predecessors of CPUsubgraph18: NPUsubgraph16; NPUsubgraph10; NPUsubgraph18; 
+ The successors of CPUsubgraph18: NPUsubgraph19; NPUsubgraph20; 
+CPUsubgraph19: order39
+Inputs:/up_blocks.0/resnets.1/conv1/Conv_output_0; size:1 1280 8 8 /down_blocks.0/resnets.0/act_1/Mul_output_0; size:1 1280 
+Outputs:/up_blocks.0/resnets.1/norm2/InstanceNormalization_output_0; size:1 32 2560 
+ The predecessors of CPUsubgraph19: NPUsubgraph19; CPUsubgraph0; 
+ The successors of CPUsubgraph19: NPUsubgraph20; 
+CPUsubgraph20: order41
+Inputs:/up_blocks.0/attentions.1/norm/Reshape_output_0; size:1 32 2560 
+Outputs:/up_blocks.0/attentions.1/norm/Reshape_1_output_0; size:1 1280 8 8 
+ The predecessors of CPUsubgraph20: NPUsubgraph20; 
+ The successors of CPUsubgraph20: NPUsubgraph21; 
+CPUsubgraph21: order43
+Inputs:encoder_hidden_states; size:1 77 768 /up_blocks.0/attentions.1/proj_in/Conv_output_0; size:1 1280 8 8 
+Outputs:/up_blocks.0/attentions.1/Transpose_1_output_0; size:1 1280 8 8 
+ The predecessors of CPUsubgraph21: NPUsubgraph21; 
+ The successors of CPUsubgraph21: NPUsubgraph22; 
+CPUsubgraph22: order45
+Inputs:/up_blocks.0/resnets.1/Add_1_output_0; size:1 1280 8 8 /up_blocks.0/attentions.1/proj_out/Conv_output_0; size:1 1280 8 8 
+Outputs:/up_blocks.0/upsamplers.0/Resize_output_0; size:1 1280 16 16 
+ The predecessors of CPUsubgraph22: NPUsubgraph20; NPUsubgraph22; 
+ The successors of CPUsubgraph22: NPUsubgraph23; 
+CPUsubgraph23: order47
+Inputs:/down_blocks.1/attentions.0/Add_output_0; size:1 640 16 16 /up_blocks.0/upsamplers.0/conv/Conv_output_0; size:1 1280 16 16 
+Outputs:/up_blocks.1/resnets.0/norm1/InstanceNormalization_output_0; size:1 32 15360 /up_blocks.1/Concat_output_0; size:1 1920 16 16 
+ The predecessors of CPUsubgraph23: CPUsubgraph9; NPUsubgraph23; 
+ The successors of CPUsubgraph23: NPUsubgraph24; NPUsubgraph25; 
+CPUsubgraph24: order49
+Inputs:/up_blocks.1/resnets.0/conv1/Conv_output_0; size:1 640 16 16 /down_blocks.0/resnets.0/act_1/Mul_output_0; size:1 1280 
+Outputs:/up_blocks.1/resnets.0/norm2/InstanceNormalization_output_0; size:1 32 5120 
+ The predecessors of CPUsubgraph24: NPUsubgraph24; CPUsubgraph0; 
+ The successors of CPUsubgraph24: NPUsubgraph25; 
+CPUsubgraph25: order51
+Inputs:/up_blocks.1/attentions.0/norm/Reshape_output_0; size:1 32 5120 
+Outputs:/up_blocks.1/attentions.0/norm/Reshape_1_output_0; size:1 640 16 16 
+ The predecessors of CPUsubgraph25: NPUsubgraph25; 
+ The successors of CPUsubgraph25: NPUsubgraph26; 
+CPUsubgraph26: order53
+Inputs:encoder_hidden_states; size:1 77 768 /up_blocks.1/attentions.0/proj_in/Conv_output_0; size:1 640 16 16 
+Outputs:/up_blocks.1/attentions.0/Transpose_1_output_0; size:1 640 16 16 
+ The predecessors of CPUsubgraph26: NPUsubgraph26; 
+ The successors of CPUsubgraph26: NPUsubgraph27; 
+CPUsubgraph27: order55
+Inputs:/down_blocks.0/downsamplers.0/conv/Conv_output_0; size:1 320 16 16 /up_blocks.1/resnets.0/Add_1_output_0; size:1 640 16 16 /up_blocks.1/attentions.0/proj_out/Conv_output_0; size:1 640 16 16 
+Outputs:/up_blocks.1/resnets.1/norm1/InstanceNormalization_output_0; size:1 32 7680 /up_blocks.1/Concat_1_output_0; size:1 960 16 16 
+ The predecessors of CPUsubgraph27: NPUsubgraph5; NPUsubgraph25; NPUsubgraph27; 
+ The successors of CPUsubgraph27: NPUsubgraph28; NPUsubgraph29; 
+CPUsubgraph28: order57
+Inputs:/up_blocks.1/resnets.1/conv1/Conv_output_0; size:1 640 16 16 /down_blocks.0/resnets.0/act_1/Mul_output_0; size:1 1280 
+Outputs:/up_blocks.1/resnets.1/norm2/InstanceNormalization_output_0; size:1 32 5120 
+ The predecessors of CPUsubgraph28: NPUsubgraph28; CPUsubgraph0; 
+ The successors of CPUsubgraph28: NPUsubgraph29; 
+CPUsubgraph29: order59
+Inputs:/up_blocks.1/attentions.1/norm/Reshape_output_0; size:1 32 5120 
+Outputs:/up_blocks.1/attentions.1/norm/Reshape_1_output_0; size:1 640 16 16 
+ The predecessors of CPUsubgraph29: NPUsubgraph29; 
+ The successors of CPUsubgraph29: NPUsubgraph30; 
+CPUsubgraph30: order61
+Inputs:encoder_hidden_states; size:1 77 768 /up_blocks.1/attentions.1/proj_in/Conv_output_0; size:1 640 16 16 
+Outputs:/up_blocks.1/attentions.1/Transpose_1_output_0; size:1 640 16 16 
+ The predecessors of CPUsubgraph30: NPUsubgraph30; 
+ The successors of CPUsubgraph30: NPUsubgraph31; 
+CPUsubgraph31: order63
+Inputs:/up_blocks.1/resnets.1/Add_1_output_0; size:1 640 16 16 /up_blocks.1/attentions.1/proj_out/Conv_output_0; size:1 640 16 16 
+Outputs:/up_blocks.1/upsamplers.0/Resize_output_0; size:1 640 32 32 
+ The predecessors of CPUsubgraph31: NPUsubgraph29; NPUsubgraph31; 
+ The successors of CPUsubgraph31: NPUsubgraph32; 
+CPUsubgraph32: order65
+Inputs:/down_blocks.0/attentions.0/Add_output_0; size:1 320 32 32 /up_blocks.1/upsamplers.0/conv/Conv_output_0; size:1 640 32 32 
+Outputs:/up_blocks.2/resnets.0/norm1/InstanceNormalization_output_0; size:1 32 30720 /up_blocks.2/Concat_output_0; size:1 960 32 32 
+ The predecessors of CPUsubgraph32: CPUsubgraph4; NPUsubgraph32; 
+ The successors of CPUsubgraph32: NPUsubgraph33; NPUsubgraph34; 
+CPUsubgraph33: order67
+Inputs:/up_blocks.2/resnets.0/conv1/Conv_output_0; size:1 320 32 32 /down_blocks.0/resnets.0/act_1/Mul_output_0; size:1 1280 
+Outputs:/up_blocks.2/resnets.0/norm2/InstanceNormalization_output_0; size:1 32 10240 
+ The predecessors of CPUsubgraph33: NPUsubgraph33; CPUsubgraph0; 
+ The successors of CPUsubgraph33: NPUsubgraph34; 
+CPUsubgraph34: order69
+Inputs:/up_blocks.2/attentions.0/norm/Reshape_output_0; size:1 32 10240 
+Outputs:/up_blocks.2/attentions.0/norm/Reshape_1_output_0; size:1 320 32 32 
+ The predecessors of CPUsubgraph34: NPUsubgraph34; 
+ The successors of CPUsubgraph34: NPUsubgraph35; 
+CPUsubgraph35: order71
+Inputs:encoder_hidden_states; size:1 77 768 /up_blocks.2/attentions.0/proj_in/Conv_output_0; size:1 320 32 32 
+Outputs:/up_blocks.2/attentions.0/Transpose_1_output_0; size:1 320 32 32 
+ The predecessors of CPUsubgraph35: NPUsubgraph35; 
+ The successors of CPUsubgraph35: NPUsubgraph36; 
+CPUsubgraph36: order73
+Inputs:/conv_in/Conv_output_0; size:1 320 32 32 /up_blocks.2/resnets.0/Add_1_output_0; size:1 320 32 32 /up_blocks.2/attentions.0/proj_out/Conv_output_0; size:1 320 32 32 
+Outputs:/up_blocks.2/resnets.1/norm1/InstanceNormalization_output_0; size:1 32 20480 /up_blocks.2/Concat_1_output_0; size:1 640 32 32 
+ The predecessors of CPUsubgraph36: NPUsubgraph0; NPUsubgraph34; NPUsubgraph36; 
+ The successors of CPUsubgraph36: NPUsubgraph37; NPUsubgraph38; 
+CPUsubgraph37: order75
+Inputs:/up_blocks.2/resnets.1/conv1/Conv_output_0; size:1 320 32 32 /down_blocks.0/resnets.0/act_1/Mul_output_0; size:1 1280 
+Outputs:/up_blocks.2/resnets.1/norm2/InstanceNormalization_output_0; size:1 32 10240 
+ The predecessors of CPUsubgraph37: NPUsubgraph37; CPUsubgraph0; 
+ The successors of CPUsubgraph37: NPUsubgraph38; 
+CPUsubgraph38: order77
+Inputs:/up_blocks.2/attentions.1/norm/Reshape_output_0; size:1 32 10240 
+Outputs:/up_blocks.2/attentions.1/norm/Reshape_1_output_0; size:1 320 32 32 
+ The predecessors of CPUsubgraph38: NPUsubgraph38; 
+ The successors of CPUsubgraph38: NPUsubgraph39; 
+CPUsubgraph39: order79
+Inputs:encoder_hidden_states; size:1 77 768 /up_blocks.2/attentions.1/proj_in/Conv_output_0; size:1 320 32 32 
+Outputs:/up_blocks.2/attentions.1/Transpose_1_output_0; size:1 320 32 32 
+ The predecessors of CPUsubgraph39: NPUsubgraph39; 
+ The successors of CPUsubgraph39: NPUsubgraph40; 
+CPUsubgraph40: order81
+Inputs:/up_blocks.2/resnets.1/Add_1_output_0; size:1 320 32 32 /up_blocks.2/attentions.1/proj_out/Conv_output_0; size:1 320 32 32 
+Outputs:
+ The predecessors of CPUsubgraph40: NPUsubgraph38; NPUsubgraph40; 
+ The successors of CPUsubgraph40: 

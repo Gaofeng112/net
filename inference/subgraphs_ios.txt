@@ -1,0 +1,1117 @@
+ order
+1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 3 5 7 9 9 9 11 13 15 17 18 19 21 23 25 27 27 27 29 31 33 35 36 37 39 41 43 45 45 45 47 49 51 53 55 56 58 60 62 62 62 64 66 68 70 72 73 75 77 79 79 79 81 83 85 87 89 91 92 94 96 98 98 98 100 102 104 106 108 109 111 113 115 115 115 117 119 121 123 125 127 128 130 132 134 134 134 136 138 140 142 144 145 147 149 151 151 151 153 155 157 159 161 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 2 4 6 8 10 12 14 16 19 20 22 24 26 28 30 32 34 37 38 40 42 44 46 48 50 52 54 55 57 59 61 63 65 67 69 71 72 74 76 78 80 82 84 86 88 90 91 93 95 97 99 101 103 105 107 108 110 112 114 116 118 120 122 124 126 127 129 131 133 135 137 139 141 143 144 146 148 150 152 154 156 158 160 162 
+NPUsubgraph0: order1
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_17/dense_98/Tensordot/MatMul:0; size:77 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_17/Reshape_7:0; size:8 77 40 
+ The predecessors of NPUsubgraph0: CPUsubgraph0; 
+ The successors of NPUsubgraph0: CPUsubgraph97; 
+NPUsubgraph1: order1
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_17/dense_97/Tensordot/MatMul:0; size:77 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_17/Reshape_4:0; size:8 40 77 
+ The predecessors of NPUsubgraph1: CPUsubgraph0; 
+ The successors of NPUsubgraph1: CPUsubgraph97; 
+NPUsubgraph2: order2
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_15/dense_87/Tensordot/MatMul:0; size:77 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_15/Reshape_7:0; size:8 77 40 
+ The predecessors of NPUsubgraph2: CPUsubgraph1; 
+ The successors of NPUsubgraph2: CPUsubgraph88; 
+NPUsubgraph3: order2
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_15/dense_86/Tensordot/MatMul:0; size:77 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_15/Reshape_4:0; size:8 40 77 
+ The predecessors of NPUsubgraph3: CPUsubgraph2; 
+ The successors of NPUsubgraph3: CPUsubgraph88; 
+NPUsubgraph4: order2
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_13/dense_76/Tensordot/MatMul:0; size:77 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_13/Reshape_7:0; size:8 77 80 
+ The predecessors of NPUsubgraph4: CPUsubgraph3; 
+ The successors of NPUsubgraph4: CPUsubgraph78; 
+NPUsubgraph5: order2
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_13/dense_75/Tensordot/MatMul:0; size:77 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_13/Reshape_4:0; size:8 80 77 
+ The predecessors of NPUsubgraph5: CPUsubgraph4; 
+ The successors of NPUsubgraph5: CPUsubgraph78; 
+NPUsubgraph6: order2
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_11/dense_65/Tensordot/MatMul:0; size:77 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_11/Reshape_7:0; size:8 77 80 
+ The predecessors of NPUsubgraph6: CPUsubgraph5; 
+ The successors of NPUsubgraph6: CPUsubgraph69; 
+NPUsubgraph7: order2
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_11/dense_64/Tensordot/MatMul:0; size:77 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_11/Reshape_4:0; size:8 80 77 
+ The predecessors of NPUsubgraph7: CPUsubgraph6; 
+ The successors of NPUsubgraph7: CPUsubgraph69; 
+NPUsubgraph8: order2
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_9/dense_54/Tensordot/MatMul:0; size:77 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_9/Reshape_7:0; size:8 77 160 
+ The predecessors of NPUsubgraph8: CPUsubgraph7; 
+ The successors of NPUsubgraph8: CPUsubgraph59; 
+NPUsubgraph9: order2
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_9/dense_53/Tensordot/MatMul:0; size:77 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_9/Reshape_4:0; size:8 160 77 
+ The predecessors of NPUsubgraph9: CPUsubgraph8; 
+ The successors of NPUsubgraph9: CPUsubgraph59; 
+NPUsubgraph10: order2
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_7/dense_43/Tensordot/MatMul:0; size:77 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_7/Reshape_7:0; size:8 77 160 
+ The predecessors of NPUsubgraph10: CPUsubgraph9; 
+ The successors of NPUsubgraph10: CPUsubgraph50; 
+NPUsubgraph11: order2
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_7/dense_42/Tensordot/MatMul:0; size:77 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_7/Reshape_4:0; size:8 160 77 
+ The predecessors of NPUsubgraph11: CPUsubgraph10; 
+ The successors of NPUsubgraph11: CPUsubgraph50; 
+NPUsubgraph12: order2
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_5/dense_32/Tensordot/MatMul:0; size:77 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_5/Reshape_7:0; size:8 77 160 
+ The predecessors of NPUsubgraph12: CPUsubgraph11; 
+ The successors of NPUsubgraph12: CPUsubgraph41; 
+NPUsubgraph13: order2
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_5/dense_31/Tensordot/MatMul:0; size:77 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_5/Reshape_4:0; size:8 160 77 
+ The predecessors of NPUsubgraph13: CPUsubgraph12; 
+ The successors of NPUsubgraph13: CPUsubgraph41; 
+NPUsubgraph14: order2
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_3/dense_21/Tensordot/MatMul:0; size:77 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_3/Reshape_7:0; size:8 77 80 
+ The predecessors of NPUsubgraph14: CPUsubgraph13; 
+ The successors of NPUsubgraph14: CPUsubgraph32; 
+NPUsubgraph15: order2
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_3/dense_20/Tensordot/MatMul:0; size:77 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_3/Reshape_4:0; size:8 80 77 
+ The predecessors of NPUsubgraph15: CPUsubgraph14; 
+ The successors of NPUsubgraph15: CPUsubgraph32; 
+NPUsubgraph16: order2
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/dense_10/Tensordot/MatMul:0; size:77 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/Reshape_7:0; size:8 77 40 
+ The predecessors of NPUsubgraph16: CPUsubgraph15; 
+ The successors of NPUsubgraph16: CPUsubgraph23; 
+NPUsubgraph17: order2
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/dense_9/Tensordot/MatMul:0; size:77 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/Reshape_4:0; size:8 40 77 
+ The predecessors of NPUsubgraph17: CPUsubgraph15; 
+ The successors of NPUsubgraph17: CPUsubgraph23; 
+NPUsubgraph18: order1
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/padded_conv2d/conv2d/Conv2D__62:0; size:1 4 32 32 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block/strided_slice:0; size:1 1 1 320 
+Outputs:Transpose__2113:0; size:1 32 32 320 Conv__2107:0; size:1 320 32 32 Transpose__2119:0; size:1 320 1 1 
+ The predecessors of NPUsubgraph18: CPUsubgraph16; CPUsubgraph16; 
+ The successors of NPUsubgraph18: NPUsubgraph19; NPUsubgraph20; CPUsubgraph17; CPUsubgraph90; 
+NPUsubgraph19: order3
+Inputs:Transpose__2119:0; size:1 320 1 1 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block/group_normalization/batchnorm/add_1:0; size:1 32 32 32 10 
+Outputs:Transpose__2129:0; size:1 32 32 320 
+ The predecessors of NPUsubgraph19: NPUsubgraph18; CPUsubgraph17; 
+ The successors of NPUsubgraph19: CPUsubgraph18; 
+NPUsubgraph20: order5
+Inputs:Conv__2107:0; size:1 320 32 32 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block/group_normalization_1/batchnorm/add_1:0; size:1 32 32 32 10 
+Outputs:Transpose__2135:0; size:1 32 32 320 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block/add_1:0; size:1 320 32 32 
+ The predecessors of NPUsubgraph20: NPUsubgraph18; CPUsubgraph18; 
+ The successors of NPUsubgraph20: NPUsubgraph28; CPUsubgraph19; 
+NPUsubgraph21: order7
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/group_normalization_2/batchnorm/add_1:0; size:1 32 32 32 10 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/Reshape:0; size:1 1024 320 
+ The predecessors of NPUsubgraph21: CPUsubgraph19; 
+ The successors of NPUsubgraph21: CPUsubgraph20; CPUsubgraph22; 
+NPUsubgraph22: order9
+Inputs:_v_2564; size:1024 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention/Reshape_7:0; size:8 1024 40 
+ The predecessors of NPUsubgraph22: CPUsubgraph20; 
+ The successors of NPUsubgraph22: CPUsubgraph21; 
+NPUsubgraph23: order9
+Inputs:_v_2565; size:1024 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention/Reshape_4:0; size:8 40 1024 
+ The predecessors of NPUsubgraph23: CPUsubgraph20; 
+ The successors of NPUsubgraph23: CPUsubgraph21; 
+NPUsubgraph24: order9
+Inputs:_v_2566; size:1024 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention/Reshape_3:0; size:8 1024 40 
+ The predecessors of NPUsubgraph24: CPUsubgraph20; 
+ The successors of NPUsubgraph24: CPUsubgraph21; 
+NPUsubgraph25: order11
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention/MatMul_1:0; size:8 1024 40 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention/dense_7/Tensordot/Reshape:0; size:1024 320 
+ The predecessors of NPUsubgraph25: CPUsubgraph21; 
+ The successors of NPUsubgraph25: CPUsubgraph22; 
+NPUsubgraph26: order13
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/dense_8/Tensordot/MatMul:0; size:1024 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/Reshape_3:0; size:8 1024 40 
+ The predecessors of NPUsubgraph26: CPUsubgraph22; 
+ The successors of NPUsubgraph26: CPUsubgraph23; 
+NPUsubgraph27: order15
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/MatMul_1:0; size:8 1024 40 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/dense_11/Tensordot/Reshape:0; size:1024 320 
+ The predecessors of NPUsubgraph27: CPUsubgraph23; 
+ The successors of NPUsubgraph27: CPUsubgraph24; 
+NPUsubgraph28: order17
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block/add_1:0; size:1 320 32 32 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/add_1:0; size:1 1024 320 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/dense_13/Tensordot/MatMul:0; size:1024 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/add:0; size:1 320 32 32 
+ The predecessors of NPUsubgraph28: NPUsubgraph20; CPUsubgraph24; CPUsubgraph24; 
+ The successors of NPUsubgraph28: NPUsubgraph29; CPUsubgraph81; 
+NPUsubgraph29: order18
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/add:0; size:1 320 32 32 
+Outputs:Conv__2149:0; size:1 320 16 16 
+ The predecessors of NPUsubgraph29: NPUsubgraph28; 
+ The successors of NPUsubgraph29: NPUsubgraph30; CPUsubgraph25; CPUsubgraph71; 
+NPUsubgraph30: order19
+Inputs:Conv__2149:0; size:1 320 16 16 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_1/padded_conv2d_8/conv2d_8/BiasAdd:0; size:1 640 16 16 
+ The predecessors of NPUsubgraph30: NPUsubgraph29; 
+ The successors of NPUsubgraph30: NPUsubgraph32; 
+NPUsubgraph31: order21
+Inputs:Transpose__2177:0; size:1 640 1 1 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_1/group_normalization_3/batchnorm/add_1:0; size:1 16 16 32 10 
+Outputs:Transpose__2183:0; size:1 16 16 640 
+ The predecessors of NPUsubgraph31: CPUsubgraph16; CPUsubgraph26; 
+ The successors of NPUsubgraph31: CPUsubgraph27; 
+NPUsubgraph32: order23
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_1/padded_conv2d_8/conv2d_8/BiasAdd:0; size:1 640 16 16 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_1/group_normalization_4/batchnorm/add_1:0; size:1 16 16 32 20 
+Outputs:Transpose__2169:0; size:1 16 16 640 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_1/add_1:0; size:1 640 16 16 
+ The predecessors of NPUsubgraph32: NPUsubgraph30; CPUsubgraph27; 
+ The successors of NPUsubgraph32: NPUsubgraph40; CPUsubgraph28; 
+NPUsubgraph33: order25
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/group_normalization_5/batchnorm/add_1:0; size:1 16 16 32 20 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/Reshape:0; size:1 256 640 
+ The predecessors of NPUsubgraph33: CPUsubgraph28; 
+ The successors of NPUsubgraph33: CPUsubgraph29; CPUsubgraph31; 
+NPUsubgraph34: order27
+Inputs:_v_2571; size:256 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_2/Reshape_7:0; size:8 256 80 
+ The predecessors of NPUsubgraph34: CPUsubgraph29; 
+ The successors of NPUsubgraph34: CPUsubgraph30; 
+NPUsubgraph35: order27
+Inputs:_v_2572; size:256 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_2/Reshape_4:0; size:8 80 256 
+ The predecessors of NPUsubgraph35: CPUsubgraph29; 
+ The successors of NPUsubgraph35: CPUsubgraph30; 
+NPUsubgraph36: order27
+Inputs:_v_2573; size:256 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_2/Reshape_3:0; size:8 256 80 
+ The predecessors of NPUsubgraph36: CPUsubgraph29; 
+ The successors of NPUsubgraph36: CPUsubgraph30; 
+NPUsubgraph37: order29
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_2/MatMul_1:0; size:8 256 80 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_2/dense_18/Tensordot/Reshape:0; size:256 640 
+ The predecessors of NPUsubgraph37: CPUsubgraph30; 
+ The successors of NPUsubgraph37: CPUsubgraph31; 
+NPUsubgraph38: order31
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_3/dense_19/Tensordot/MatMul:0; size:256 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_3/Reshape_3:0; size:8 256 80 
+ The predecessors of NPUsubgraph38: CPUsubgraph31; 
+ The successors of NPUsubgraph38: CPUsubgraph32; 
+NPUsubgraph39: order33
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_3/MatMul_1:0; size:8 256 80 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_3/dense_22/Tensordot/Reshape:0; size:256 640 
+ The predecessors of NPUsubgraph39: CPUsubgraph32; 
+ The successors of NPUsubgraph39: CPUsubgraph33; 
+NPUsubgraph40: order35
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_1/add_1:0; size:1 640 16 16 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/add_1:0; size:1 256 640 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/dense_24/Tensordot/MatMul:0; size:256 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/add:0; size:1 640 16 16 
+ The predecessors of NPUsubgraph40: NPUsubgraph32; CPUsubgraph33; CPUsubgraph33; 
+ The successors of NPUsubgraph40: NPUsubgraph41; CPUsubgraph62; 
+NPUsubgraph41: order36
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/add:0; size:1 640 16 16 
+Outputs:Conv__2195:0; size:1 640 8 8 
+ The predecessors of NPUsubgraph41: NPUsubgraph40; 
+ The successors of NPUsubgraph41: NPUsubgraph42; CPUsubgraph34; CPUsubgraph52; 
+NPUsubgraph42: order37
+Inputs:Conv__2195:0; size:1 640 8 8 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_2/padded_conv2d_14/conv2d_14/BiasAdd:0; size:1 1280 8 8 
+ The predecessors of NPUsubgraph42: NPUsubgraph41; 
+ The successors of NPUsubgraph42: NPUsubgraph44; 
+NPUsubgraph43: order39
+Inputs:Transpose__2223:0; size:1 1280 1 1 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_2/group_normalization_6/batchnorm/add_1:0; size:1 8 8 32 20 
+Outputs:Transpose__2233:0; size:1 8 8 1280 
+ The predecessors of NPUsubgraph43: CPUsubgraph16; CPUsubgraph35; 
+ The successors of NPUsubgraph43: CPUsubgraph36; 
+NPUsubgraph44: order41
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_2/padded_conv2d_14/conv2d_14/BiasAdd:0; size:1 1280 8 8 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_2/group_normalization_7/batchnorm/add_1:0; size:1 8 8 32 40 
+Outputs:Transpose__2211:0; size:1 8 8 1280 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_2/add_1:0; size:1 1280 8 8 
+ The predecessors of NPUsubgraph44: NPUsubgraph42; CPUsubgraph36; 
+ The successors of NPUsubgraph44: NPUsubgraph52; CPUsubgraph37; 
+NPUsubgraph45: order43
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/group_normalization_8/batchnorm/add_1:0; size:1 8 8 32 40 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/Reshape:0; size:1 64 1280 
+ The predecessors of NPUsubgraph45: CPUsubgraph37; 
+ The successors of NPUsubgraph45: CPUsubgraph38; CPUsubgraph40; 
+NPUsubgraph46: order45
+Inputs:_v_2578; size:64 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_4/Reshape_7:0; size:8 64 160 
+ The predecessors of NPUsubgraph46: CPUsubgraph38; 
+ The successors of NPUsubgraph46: CPUsubgraph39; 
+NPUsubgraph47: order45
+Inputs:_v_2579; size:64 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_4/Reshape_4:0; size:8 160 64 
+ The predecessors of NPUsubgraph47: CPUsubgraph38; 
+ The successors of NPUsubgraph47: CPUsubgraph39; 
+NPUsubgraph48: order45
+Inputs:_v_2580; size:64 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_4/Reshape_3:0; size:8 64 160 
+ The predecessors of NPUsubgraph48: CPUsubgraph38; 
+ The successors of NPUsubgraph48: CPUsubgraph39; 
+NPUsubgraph49: order47
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_4/MatMul_1:0; size:8 64 160 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_4/dense_29/Tensordot/Reshape:0; size:64 1280 
+ The predecessors of NPUsubgraph49: CPUsubgraph39; 
+ The successors of NPUsubgraph49: CPUsubgraph40; 
+NPUsubgraph50: order49
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_5/dense_30/Tensordot/MatMul:0; size:64 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_5/Reshape_3:0; size:8 64 160 
+ The predecessors of NPUsubgraph50: CPUsubgraph40; 
+ The successors of NPUsubgraph50: CPUsubgraph41; 
+NPUsubgraph51: order51
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_5/MatMul_1:0; size:8 64 160 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_5/dense_33/Tensordot/Reshape:0; size:64 1280 
+ The predecessors of NPUsubgraph51: CPUsubgraph41; 
+ The successors of NPUsubgraph51: CPUsubgraph42; 
+NPUsubgraph52: order53
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_2/add_1:0; size:1 1280 8 8 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/add_1:0; size:1 64 1280 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/dense_35/Tensordot/MatMul:0; size:64 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/add:0; size:1 1280 8 8 
+ The predecessors of NPUsubgraph52: NPUsubgraph44; CPUsubgraph42; CPUsubgraph42; 
+ The successors of NPUsubgraph52: CPUsubgraph43; 
+NPUsubgraph53: order55
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/concat:0; size:1 2560 8 8 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_3/padded_conv2d_19/conv2d_19/BiasAdd:0; size:1 1280 8 8 
+ The predecessors of NPUsubgraph53: CPUsubgraph43; 
+ The successors of NPUsubgraph53: NPUsubgraph55; 
+NPUsubgraph54: order56
+Inputs:Transpose__2259:0; size:1 1280 1 1 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_3/group_normalization_9/batchnorm/add_1:0; size:1 8 8 32 80 
+Outputs:Transpose__2265:0; size:1 8 8 1280 
+ The predecessors of NPUsubgraph54: CPUsubgraph16; CPUsubgraph44; 
+ The successors of NPUsubgraph54: CPUsubgraph45; 
+NPUsubgraph55: order58
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_3/padded_conv2d_19/conv2d_19/BiasAdd:0; size:1 1280 8 8 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_3/group_normalization_10/batchnorm/add_1:0; size:1 8 8 32 40 
+Outputs:Transpose__2247:0; size:1 8 8 1280 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_3/add_1:0; size:1 1280 8 8 
+ The predecessors of NPUsubgraph55: NPUsubgraph53; CPUsubgraph45; 
+ The successors of NPUsubgraph55: NPUsubgraph63; CPUsubgraph46; 
+NPUsubgraph56: order60
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/group_normalization_11/batchnorm/add_1:0; size:1 8 8 32 40 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/Reshape:0; size:1 64 1280 
+ The predecessors of NPUsubgraph56: CPUsubgraph46; 
+ The successors of NPUsubgraph56: CPUsubgraph47; CPUsubgraph49; 
+NPUsubgraph57: order62
+Inputs:_v_2585; size:64 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_6/Reshape_7:0; size:8 64 160 
+ The predecessors of NPUsubgraph57: CPUsubgraph47; 
+ The successors of NPUsubgraph57: CPUsubgraph48; 
+NPUsubgraph58: order62
+Inputs:_v_2586; size:64 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_6/Reshape_4:0; size:8 160 64 
+ The predecessors of NPUsubgraph58: CPUsubgraph47; 
+ The successors of NPUsubgraph58: CPUsubgraph48; 
+NPUsubgraph59: order62
+Inputs:_v_2587; size:64 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_6/Reshape_3:0; size:8 64 160 
+ The predecessors of NPUsubgraph59: CPUsubgraph47; 
+ The successors of NPUsubgraph59: CPUsubgraph48; 
+NPUsubgraph60: order64
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_6/MatMul_1:0; size:8 64 160 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_6/dense_40/Tensordot/Reshape:0; size:64 1280 
+ The predecessors of NPUsubgraph60: CPUsubgraph48; 
+ The successors of NPUsubgraph60: CPUsubgraph49; 
+NPUsubgraph61: order66
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_7/dense_41/Tensordot/MatMul:0; size:64 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_7/Reshape_3:0; size:8 64 160 
+ The predecessors of NPUsubgraph61: CPUsubgraph49; 
+ The successors of NPUsubgraph61: CPUsubgraph50; 
+NPUsubgraph62: order68
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_7/MatMul_1:0; size:8 64 160 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_7/dense_44/Tensordot/Reshape:0; size:64 1280 
+ The predecessors of NPUsubgraph62: CPUsubgraph50; 
+ The successors of NPUsubgraph62: CPUsubgraph51; 
+NPUsubgraph63: order70
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_3/add_1:0; size:1 1280 8 8 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/add_1:0; size:1 64 1280 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/dense_46/Tensordot/MatMul:0; size:64 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/add:0; size:1 1280 8 8 
+ The predecessors of NPUsubgraph63: NPUsubgraph55; CPUsubgraph51; CPUsubgraph51; 
+ The successors of NPUsubgraph63: CPUsubgraph52; 
+NPUsubgraph64: order72
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/concat_1:0; size:1 1920 8 8 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_4/padded_conv2d_24/conv2d_24/BiasAdd:0; size:1 1280 8 8 
+ The predecessors of NPUsubgraph64: CPUsubgraph52; 
+ The successors of NPUsubgraph64: NPUsubgraph66; 
+NPUsubgraph65: order73
+Inputs:Transpose__2295:0; size:1 1280 1 1 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_4/group_normalization_12/batchnorm/add_1:0; size:1 8 8 32 60 
+Outputs:Transpose__2305:0; size:1 8 8 1280 
+ The predecessors of NPUsubgraph65: CPUsubgraph16; CPUsubgraph53; 
+ The successors of NPUsubgraph65: CPUsubgraph54; 
+NPUsubgraph66: order75
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_4/padded_conv2d_24/conv2d_24/BiasAdd:0; size:1 1280 8 8 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_4/group_normalization_13/batchnorm/add_1:0; size:1 8 8 32 40 
+Outputs:Transpose__2291:0; size:1 8 8 1280 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_4/add_1:0; size:1 1280 8 8 
+ The predecessors of NPUsubgraph66: NPUsubgraph64; CPUsubgraph54; 
+ The successors of NPUsubgraph66: NPUsubgraph74; CPUsubgraph55; 
+NPUsubgraph67: order77
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/group_normalization_14/batchnorm/add_1:0; size:1 8 8 32 40 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/Reshape:0; size:1 64 1280 
+ The predecessors of NPUsubgraph67: CPUsubgraph55; 
+ The successors of NPUsubgraph67: CPUsubgraph56; CPUsubgraph58; 
+NPUsubgraph68: order79
+Inputs:_v_2592; size:64 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_8/Reshape_7:0; size:8 64 160 
+ The predecessors of NPUsubgraph68: CPUsubgraph56; 
+ The successors of NPUsubgraph68: CPUsubgraph57; 
+NPUsubgraph69: order79
+Inputs:_v_2593; size:64 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_8/Reshape_4:0; size:8 160 64 
+ The predecessors of NPUsubgraph69: CPUsubgraph56; 
+ The successors of NPUsubgraph69: CPUsubgraph57; 
+NPUsubgraph70: order79
+Inputs:_v_2594; size:64 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_8/Reshape_3:0; size:8 64 160 
+ The predecessors of NPUsubgraph70: CPUsubgraph56; 
+ The successors of NPUsubgraph70: CPUsubgraph57; 
+NPUsubgraph71: order81
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_8/MatMul_1:0; size:8 64 160 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_8/dense_51/Tensordot/Reshape:0; size:64 1280 
+ The predecessors of NPUsubgraph71: CPUsubgraph57; 
+ The successors of NPUsubgraph71: CPUsubgraph58; 
+NPUsubgraph72: order83
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_9/dense_52/Tensordot/MatMul:0; size:64 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_9/Reshape_3:0; size:8 64 160 
+ The predecessors of NPUsubgraph72: CPUsubgraph58; 
+ The successors of NPUsubgraph72: CPUsubgraph59; 
+NPUsubgraph73: order85
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_9/MatMul_1:0; size:8 64 160 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_9/dense_55/Tensordot/Reshape:0; size:64 1280 
+ The predecessors of NPUsubgraph73: CPUsubgraph59; 
+ The successors of NPUsubgraph73: CPUsubgraph60; 
+NPUsubgraph74: order87
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_4/add_1:0; size:1 1280 8 8 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/add_1:0; size:1 64 1280 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/dense_57/Tensordot/MatMul:0; size:64 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/add:0; size:1 1280 8 8 
+ The predecessors of NPUsubgraph74: NPUsubgraph66; CPUsubgraph60; CPUsubgraph60; 
+ The successors of NPUsubgraph74: CPUsubgraph61; 
+NPUsubgraph75: order89
+Inputs:Resize__1327:0; size:1 1280 16 16 
+Outputs:Conv__2309:0; size:1 1280 16 16 
+ The predecessors of NPUsubgraph75: CPUsubgraph61; 
+ The successors of NPUsubgraph75: CPUsubgraph62; 
+NPUsubgraph76: order91
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/concat_2:0; size:1 1920 16 16 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_5/padded_conv2d_30/conv2d_30/BiasAdd:0; size:1 640 16 16 
+ The predecessors of NPUsubgraph76: CPUsubgraph62; 
+ The successors of NPUsubgraph76: NPUsubgraph78; 
+NPUsubgraph77: order92
+Inputs:Transpose__2337:0; size:1 640 1 1 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_5/group_normalization_15/batchnorm/add_1:0; size:1 16 16 32 60 
+Outputs:Transpose__2347:0; size:1 16 16 640 
+ The predecessors of NPUsubgraph77: CPUsubgraph16; CPUsubgraph63; 
+ The successors of NPUsubgraph77: CPUsubgraph64; 
+NPUsubgraph78: order94
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_5/padded_conv2d_30/conv2d_30/BiasAdd:0; size:1 640 16 16 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_5/group_normalization_16/batchnorm/add_1:0; size:1 16 16 32 20 
+Outputs:Transpose__2329:0; size:1 16 16 640 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_5/add_1:0; size:1 640 16 16 
+ The predecessors of NPUsubgraph78: NPUsubgraph76; CPUsubgraph64; 
+ The successors of NPUsubgraph78: NPUsubgraph86; CPUsubgraph65; 
+NPUsubgraph79: order96
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/group_normalization_17/batchnorm/add_1:0; size:1 16 16 32 20 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/Reshape:0; size:1 256 640 
+ The predecessors of NPUsubgraph79: CPUsubgraph65; 
+ The successors of NPUsubgraph79: CPUsubgraph66; CPUsubgraph68; 
+NPUsubgraph80: order98
+Inputs:_v_2599; size:256 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_10/Reshape_7:0; size:8 256 80 
+ The predecessors of NPUsubgraph80: CPUsubgraph66; 
+ The successors of NPUsubgraph80: CPUsubgraph67; 
+NPUsubgraph81: order98
+Inputs:_v_2600; size:256 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_10/Reshape_4:0; size:8 80 256 
+ The predecessors of NPUsubgraph81: CPUsubgraph66; 
+ The successors of NPUsubgraph81: CPUsubgraph67; 
+NPUsubgraph82: order98
+Inputs:_v_2601; size:256 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_10/Reshape_3:0; size:8 256 80 
+ The predecessors of NPUsubgraph82: CPUsubgraph66; 
+ The successors of NPUsubgraph82: CPUsubgraph67; 
+NPUsubgraph83: order100
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_10/MatMul_1:0; size:8 256 80 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_10/dense_62/Tensordot/Reshape:0; size:256 640 
+ The predecessors of NPUsubgraph83: CPUsubgraph67; 
+ The successors of NPUsubgraph83: CPUsubgraph68; 
+NPUsubgraph84: order102
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_11/dense_63/Tensordot/MatMul:0; size:256 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_11/Reshape_3:0; size:8 256 80 
+ The predecessors of NPUsubgraph84: CPUsubgraph68; 
+ The successors of NPUsubgraph84: CPUsubgraph69; 
+NPUsubgraph85: order104
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_11/MatMul_1:0; size:8 256 80 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_11/dense_66/Tensordot/Reshape:0; size:256 640 
+ The predecessors of NPUsubgraph85: CPUsubgraph69; 
+ The successors of NPUsubgraph85: CPUsubgraph70; 
+NPUsubgraph86: order106
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/add_1:0; size:1 256 640 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_5/add_1:0; size:1 640 16 16 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/dense_68/Tensordot/MatMul:0; size:256 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/add:0; size:1 640 16 16 
+ The predecessors of NPUsubgraph86: CPUsubgraph70; NPUsubgraph78; CPUsubgraph70; 
+ The successors of NPUsubgraph86: CPUsubgraph71; 
+NPUsubgraph87: order108
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/concat_3:0; size:1 960 16 16 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_6/padded_conv2d_35/conv2d_35/BiasAdd:0; size:1 640 16 16 
+ The predecessors of NPUsubgraph87: CPUsubgraph71; 
+ The successors of NPUsubgraph87: NPUsubgraph89; 
+NPUsubgraph88: order109
+Inputs:Transpose__2373:0; size:1 640 1 1 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_6/group_normalization_18/batchnorm/add_1:0; size:1 16 16 32 30 
+Outputs:Transpose__2383:0; size:1 16 16 640 
+ The predecessors of NPUsubgraph88: CPUsubgraph16; CPUsubgraph72; 
+ The successors of NPUsubgraph88: CPUsubgraph73; 
+NPUsubgraph89: order111
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_6/padded_conv2d_35/conv2d_35/BiasAdd:0; size:1 640 16 16 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_6/group_normalization_19/batchnorm/add_1:0; size:1 16 16 32 20 
+Outputs:Transpose__2365:0; size:1 16 16 640 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_6/add_1:0; size:1 640 16 16 
+ The predecessors of NPUsubgraph89: NPUsubgraph87; CPUsubgraph73; 
+ The successors of NPUsubgraph89: NPUsubgraph97; CPUsubgraph74; 
+NPUsubgraph90: order113
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/group_normalization_20/batchnorm/add_1:0; size:1 16 16 32 20 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/Reshape:0; size:1 256 640 
+ The predecessors of NPUsubgraph90: CPUsubgraph74; 
+ The successors of NPUsubgraph90: CPUsubgraph75; CPUsubgraph77; 
+NPUsubgraph91: order115
+Inputs:_v_2606; size:256 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_12/Reshape_7:0; size:8 256 80 
+ The predecessors of NPUsubgraph91: CPUsubgraph75; 
+ The successors of NPUsubgraph91: CPUsubgraph76; 
+NPUsubgraph92: order115
+Inputs:_v_2607; size:256 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_12/Reshape_4:0; size:8 80 256 
+ The predecessors of NPUsubgraph92: CPUsubgraph75; 
+ The successors of NPUsubgraph92: CPUsubgraph76; 
+NPUsubgraph93: order115
+Inputs:_v_2608; size:256 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_12/Reshape_3:0; size:8 256 80 
+ The predecessors of NPUsubgraph93: CPUsubgraph75; 
+ The successors of NPUsubgraph93: CPUsubgraph76; 
+NPUsubgraph94: order117
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_12/MatMul_1:0; size:8 256 80 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_12/dense_73/Tensordot/Reshape:0; size:256 640 
+ The predecessors of NPUsubgraph94: CPUsubgraph76; 
+ The successors of NPUsubgraph94: CPUsubgraph77; 
+NPUsubgraph95: order119
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_13/dense_74/Tensordot/MatMul:0; size:256 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_13/Reshape_3:0; size:8 256 80 
+ The predecessors of NPUsubgraph95: CPUsubgraph77; 
+ The successors of NPUsubgraph95: CPUsubgraph78; 
+NPUsubgraph96: order121
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_13/MatMul_1:0; size:8 256 80 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_13/dense_77/Tensordot/Reshape:0; size:256 640 
+ The predecessors of NPUsubgraph96: CPUsubgraph78; 
+ The successors of NPUsubgraph96: CPUsubgraph79; 
+NPUsubgraph97: order123
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_6/add_1:0; size:1 640 16 16 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/add_1:0; size:1 256 640 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/dense_79/Tensordot/MatMul:0; size:256 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/add:0; size:1 640 16 16 
+ The predecessors of NPUsubgraph97: NPUsubgraph89; CPUsubgraph79; CPUsubgraph79; 
+ The successors of NPUsubgraph97: CPUsubgraph80; 
+NPUsubgraph98: order125
+Inputs:Resize__1707:0; size:1 640 32 32 
+Outputs:Conv__2387:0; size:1 640 32 32 
+ The predecessors of NPUsubgraph98: CPUsubgraph80; 
+ The successors of NPUsubgraph98: CPUsubgraph81; 
+NPUsubgraph99: order127
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/concat_4:0; size:1 960 32 32 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_7/padded_conv2d_41/conv2d_41/BiasAdd:0; size:1 320 32 32 
+ The predecessors of NPUsubgraph99: CPUsubgraph81; 
+ The successors of NPUsubgraph99: NPUsubgraph101; 
+NPUsubgraph100: order128
+Inputs:Transpose__2415:0; size:1 320 1 1 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_7/group_normalization_21/batchnorm/add_1:0; size:1 32 32 32 30 
+Outputs:Transpose__2421:0; size:1 32 32 320 
+ The predecessors of NPUsubgraph100: CPUsubgraph16; CPUsubgraph82; 
+ The successors of NPUsubgraph100: CPUsubgraph83; 
+NPUsubgraph101: order130
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_7/padded_conv2d_41/conv2d_41/BiasAdd:0; size:1 320 32 32 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_7/group_normalization_22/batchnorm/add_1:0; size:1 32 32 32 10 
+Outputs:Transpose__2411:0; size:1 32 32 320 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_7/add_1:0; size:1 320 32 32 
+ The predecessors of NPUsubgraph101: NPUsubgraph99; CPUsubgraph83; 
+ The successors of NPUsubgraph101: NPUsubgraph109; CPUsubgraph84; 
+NPUsubgraph102: order132
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/group_normalization_23/batchnorm/add_1:0; size:1 32 32 32 10 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/Reshape:0; size:1 1024 320 
+ The predecessors of NPUsubgraph102: CPUsubgraph84; 
+ The successors of NPUsubgraph102: CPUsubgraph85; CPUsubgraph87; 
+NPUsubgraph103: order134
+Inputs:_v_2613; size:1024 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_14/Reshape_7:0; size:8 1024 40 
+ The predecessors of NPUsubgraph103: CPUsubgraph85; 
+ The successors of NPUsubgraph103: CPUsubgraph86; 
+NPUsubgraph104: order134
+Inputs:_v_2614; size:1024 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_14/Reshape_4:0; size:8 40 1024 
+ The predecessors of NPUsubgraph104: CPUsubgraph85; 
+ The successors of NPUsubgraph104: CPUsubgraph86; 
+NPUsubgraph105: order134
+Inputs:_v_2615; size:1024 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_14/Reshape_3:0; size:8 1024 40 
+ The predecessors of NPUsubgraph105: CPUsubgraph85; 
+ The successors of NPUsubgraph105: CPUsubgraph86; 
+NPUsubgraph106: order136
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_14/MatMul_1:0; size:8 1024 40 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_14/dense_84/Tensordot/Reshape:0; size:1024 320 
+ The predecessors of NPUsubgraph106: CPUsubgraph86; 
+ The successors of NPUsubgraph106: CPUsubgraph87; 
+NPUsubgraph107: order138
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_15/dense_85/Tensordot/MatMul:0; size:1024 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_15/Reshape_3:0; size:8 1024 40 
+ The predecessors of NPUsubgraph107: CPUsubgraph87; 
+ The successors of NPUsubgraph107: CPUsubgraph88; 
+NPUsubgraph108: order140
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_15/MatMul_1:0; size:8 1024 40 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_15/dense_88/Tensordot/Reshape:0; size:1024 320 
+ The predecessors of NPUsubgraph108: CPUsubgraph88; 
+ The successors of NPUsubgraph108: CPUsubgraph89; 
+NPUsubgraph109: order142
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/add_1:0; size:1 1024 320 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_7/add_1:0; size:1 320 32 32 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/dense_90/Tensordot/MatMul:0; size:1024 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/add:0; size:1 320 32 32 
+ The predecessors of NPUsubgraph109: CPUsubgraph89; NPUsubgraph101; CPUsubgraph89; 
+ The successors of NPUsubgraph109: CPUsubgraph90; 
+NPUsubgraph110: order144
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/concat_5:0; size:1 640 32 32 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_8/padded_conv2d_46/conv2d_46/BiasAdd:0; size:1 320 32 32 
+ The predecessors of NPUsubgraph110: CPUsubgraph90; 
+ The successors of NPUsubgraph110: NPUsubgraph112; 
+NPUsubgraph111: order145
+Inputs:Transpose__2451:0; size:1 320 1 1 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_8/group_normalization_24/batchnorm/add_1:0; size:1 32 32 32 20 
+Outputs:Transpose__2461:0; size:1 32 32 320 
+ The predecessors of NPUsubgraph111: CPUsubgraph16; CPUsubgraph91; 
+ The successors of NPUsubgraph111: CPUsubgraph92; 
+NPUsubgraph112: order147
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_8/padded_conv2d_46/conv2d_46/BiasAdd:0; size:1 320 32 32 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_8/group_normalization_25/batchnorm/add_1:0; size:1 32 32 32 10 
+Outputs:Transpose__2443:0; size:1 32 32 320 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_8/add_1:0; size:1 320 32 32 
+ The predecessors of NPUsubgraph112: NPUsubgraph110; CPUsubgraph92; 
+ The successors of NPUsubgraph112: NPUsubgraph120; CPUsubgraph93; 
+NPUsubgraph113: order149
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/group_normalization_26/batchnorm/add_1:0; size:1 32 32 32 10 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/Reshape:0; size:1 1024 320 
+ The predecessors of NPUsubgraph113: CPUsubgraph93; 
+ The successors of NPUsubgraph113: CPUsubgraph94; CPUsubgraph96; 
+NPUsubgraph114: order151
+Inputs:_v_2620; size:1024 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_16/Reshape_7:0; size:8 1024 40 
+ The predecessors of NPUsubgraph114: CPUsubgraph94; 
+ The successors of NPUsubgraph114: CPUsubgraph95; 
+NPUsubgraph115: order151
+Inputs:_v_2621; size:1024 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_16/Reshape_4:0; size:8 40 1024 
+ The predecessors of NPUsubgraph115: CPUsubgraph94; 
+ The successors of NPUsubgraph115: CPUsubgraph95; 
+NPUsubgraph116: order151
+Inputs:_v_2622; size:1024 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_16/Reshape_3:0; size:8 1024 40 
+ The predecessors of NPUsubgraph116: CPUsubgraph94; 
+ The successors of NPUsubgraph116: CPUsubgraph95; 
+NPUsubgraph117: order153
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_16/MatMul_1:0; size:8 1024 40 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_16/dense_95/Tensordot/Reshape:0; size:1024 320 
+ The predecessors of NPUsubgraph117: CPUsubgraph95; 
+ The successors of NPUsubgraph117: CPUsubgraph96; 
+NPUsubgraph118: order155
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_17/dense_96/Tensordot/MatMul:0; size:1024 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_17/Reshape_3:0; size:8 1024 40 
+ The predecessors of NPUsubgraph118: CPUsubgraph96; 
+ The successors of NPUsubgraph118: CPUsubgraph97; 
+NPUsubgraph119: order157
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_17/MatMul_1:0; size:8 1024 40 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_17/dense_99/Tensordot/Reshape:0; size:1024 320 
+ The predecessors of NPUsubgraph119: CPUsubgraph97; 
+ The successors of NPUsubgraph119: CPUsubgraph98; 
+NPUsubgraph120: order159
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_8/add_1:0; size:1 320 32 32 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/add_1:0; size:1 1024 320 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/dense_101/Tensordot/MatMul:0; size:1024 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/add:0; size:1 320 32 32 
+ The predecessors of NPUsubgraph120: NPUsubgraph112; CPUsubgraph98; CPUsubgraph98; 
+ The successors of NPUsubgraph120: CPUsubgraph99; 
+NPUsubgraph121: order161
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/padded_conv2d_49/conv2d_49/Conv2D__154:0; size:1 320 32 32 
+Outputs:Conv__2473:0; size:1 4 32 32 
+ The predecessors of NPUsubgraph121: CPUsubgraph99; 
+ The successors of NPUsubgraph121: CPUsubgraph100; 
+CPUsubgraph0: order0
+Inputs:input_4; size:1 77 768 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_17/dense_97/Tensordot/MatMul:0; size:77 320 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_17/dense_98/Tensordot/MatMul:0; size:77 320 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/dense_10/Tensordot/Reshape:0; size:77 768 
+ The predecessors of CPUsubgraph0: 
+ The successors of CPUsubgraph0: NPUsubgraph0; NPUsubgraph1; CPUsubgraph1; CPUsubgraph2; CPUsubgraph3; CPUsubgraph4; CPUsubgraph5; CPUsubgraph6; CPUsubgraph7; CPUsubgraph8; CPUsubgraph9; CPUsubgraph10; CPUsubgraph11; CPUsubgraph12; CPUsubgraph13; CPUsubgraph14; CPUsubgraph15; 
+CPUsubgraph1: order1
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/dense_10/Tensordot/Reshape:0; size:77 768 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_15/dense_87/Tensordot/MatMul:0; size:77 320 
+ The predecessors of CPUsubgraph1: CPUsubgraph0; 
+ The successors of CPUsubgraph1: NPUsubgraph2; 
+CPUsubgraph2: order1
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/dense_10/Tensordot/Reshape:0; size:77 768 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_15/dense_86/Tensordot/MatMul:0; size:77 320 
+ The predecessors of CPUsubgraph2: CPUsubgraph0; 
+ The successors of CPUsubgraph2: NPUsubgraph3; 
+CPUsubgraph3: order1
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/dense_10/Tensordot/Reshape:0; size:77 768 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_13/dense_76/Tensordot/MatMul:0; size:77 640 
+ The predecessors of CPUsubgraph3: CPUsubgraph0; 
+ The successors of CPUsubgraph3: NPUsubgraph4; 
+CPUsubgraph4: order1
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/dense_10/Tensordot/Reshape:0; size:77 768 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_13/dense_75/Tensordot/MatMul:0; size:77 640 
+ The predecessors of CPUsubgraph4: CPUsubgraph0; 
+ The successors of CPUsubgraph4: NPUsubgraph5; 
+CPUsubgraph5: order1
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/dense_10/Tensordot/Reshape:0; size:77 768 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_11/dense_65/Tensordot/MatMul:0; size:77 640 
+ The predecessors of CPUsubgraph5: CPUsubgraph0; 
+ The successors of CPUsubgraph5: NPUsubgraph6; 
+CPUsubgraph6: order1
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/dense_10/Tensordot/Reshape:0; size:77 768 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_11/dense_64/Tensordot/MatMul:0; size:77 640 
+ The predecessors of CPUsubgraph6: CPUsubgraph0; 
+ The successors of CPUsubgraph6: NPUsubgraph7; 
+CPUsubgraph7: order1
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/dense_10/Tensordot/Reshape:0; size:77 768 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_9/dense_54/Tensordot/MatMul:0; size:77 1280 
+ The predecessors of CPUsubgraph7: CPUsubgraph0; 
+ The successors of CPUsubgraph7: NPUsubgraph8; 
+CPUsubgraph8: order1
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/dense_10/Tensordot/Reshape:0; size:77 768 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_9/dense_53/Tensordot/MatMul:0; size:77 1280 
+ The predecessors of CPUsubgraph8: CPUsubgraph0; 
+ The successors of CPUsubgraph8: NPUsubgraph9; 
+CPUsubgraph9: order1
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/dense_10/Tensordot/Reshape:0; size:77 768 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_7/dense_43/Tensordot/MatMul:0; size:77 1280 
+ The predecessors of CPUsubgraph9: CPUsubgraph0; 
+ The successors of CPUsubgraph9: NPUsubgraph10; 
+CPUsubgraph10: order1
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/dense_10/Tensordot/Reshape:0; size:77 768 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_7/dense_42/Tensordot/MatMul:0; size:77 1280 
+ The predecessors of CPUsubgraph10: CPUsubgraph0; 
+ The successors of CPUsubgraph10: NPUsubgraph11; 
+CPUsubgraph11: order1
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/dense_10/Tensordot/Reshape:0; size:77 768 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_5/dense_32/Tensordot/MatMul:0; size:77 1280 
+ The predecessors of CPUsubgraph11: CPUsubgraph0; 
+ The successors of CPUsubgraph11: NPUsubgraph12; 
+CPUsubgraph12: order1
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/dense_10/Tensordot/Reshape:0; size:77 768 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_5/dense_31/Tensordot/MatMul:0; size:77 1280 
+ The predecessors of CPUsubgraph12: CPUsubgraph0; 
+ The successors of CPUsubgraph12: NPUsubgraph13; 
+CPUsubgraph13: order1
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/dense_10/Tensordot/Reshape:0; size:77 768 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_3/dense_21/Tensordot/MatMul:0; size:77 640 
+ The predecessors of CPUsubgraph13: CPUsubgraph0; 
+ The successors of CPUsubgraph13: NPUsubgraph14; 
+CPUsubgraph14: order1
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/dense_10/Tensordot/Reshape:0; size:77 768 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_3/dense_20/Tensordot/MatMul:0; size:77 640 
+ The predecessors of CPUsubgraph14: CPUsubgraph0; 
+ The successors of CPUsubgraph14: NPUsubgraph15; 
+CPUsubgraph15: order1
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/dense_10/Tensordot/Reshape:0; size:77 768 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/dense_10/Tensordot/MatMul:0; size:77 320 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/dense_9/Tensordot/MatMul:0; size:77 320 
+ The predecessors of CPUsubgraph15: CPUsubgraph0; 
+ The successors of CPUsubgraph15: NPUsubgraph16; NPUsubgraph17; 
+CPUsubgraph16: order0
+Inputs:input_1; size:1 320 input_2; size:1 256 input_3; size:1 32 32 4 
+Outputs:Transpose__2259:0; size:1 1280 1 1 Transpose__2295:0; size:1 1280 1 1 Transpose__2223:0; size:1 1280 1 1 Transpose__2337:0; size:1 640 1 1 Transpose__2177:0; size:1 640 1 1 Transpose__2373:0; size:1 640 1 1 Transpose__2415:0; size:1 320 1 1 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block/strided_slice:0; size:1 1 1 320 Transpose__2451:0; size:1 320 1 1 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/padded_conv2d/conv2d/Conv2D__62:0; size:1 4 32 32 
+ The predecessors of CPUsubgraph16: 
+ The successors of CPUsubgraph16: NPUsubgraph18; NPUsubgraph31; NPUsubgraph43; NPUsubgraph54; NPUsubgraph65; NPUsubgraph77; NPUsubgraph88; NPUsubgraph100; NPUsubgraph111; 
+CPUsubgraph17: order2
+Inputs:Transpose__2113:0; size:1 32 32 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block/group_normalization/batchnorm/add_1:0; size:1 32 32 32 10 
+ The predecessors of CPUsubgraph17: NPUsubgraph18; 
+ The successors of CPUsubgraph17: NPUsubgraph19; 
+CPUsubgraph18: order4
+Inputs:Transpose__2129:0; size:1 32 32 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block/group_normalization_1/batchnorm/add_1:0; size:1 32 32 32 10 
+ The predecessors of CPUsubgraph18: NPUsubgraph19; 
+ The successors of CPUsubgraph18: NPUsubgraph20; 
+CPUsubgraph19: order6
+Inputs:Transpose__2135:0; size:1 32 32 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/group_normalization_2/batchnorm/add_1:0; size:1 32 32 32 10 
+ The predecessors of CPUsubgraph19: NPUsubgraph20; 
+ The successors of CPUsubgraph19: NPUsubgraph21; 
+CPUsubgraph20: order8
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/Reshape:0; size:1 1024 320 
+Outputs:_v_2566; size:1024 320 _v_2565; size:1024 320 _v_2564; size:1024 320 
+ The predecessors of CPUsubgraph20: NPUsubgraph21; 
+ The successors of CPUsubgraph20: NPUsubgraph22; NPUsubgraph23; NPUsubgraph24; 
+CPUsubgraph21: order10
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention/Reshape_7:0; size:8 1024 40 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention/Reshape_4:0; size:8 40 1024 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention/Reshape_3:0; size:8 1024 40 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention/MatMul_1:0; size:8 1024 40 
+ The predecessors of CPUsubgraph21: NPUsubgraph22; NPUsubgraph23; NPUsubgraph24; 
+ The successors of CPUsubgraph21: NPUsubgraph25; 
+CPUsubgraph22: order12
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/Reshape:0; size:1 1024 320 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention/dense_7/Tensordot/Reshape:0; size:1024 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/dense_8/Tensordot/MatMul:0; size:1024 320 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/add:0; size:1 1024 320 
+ The predecessors of CPUsubgraph22: NPUsubgraph21; NPUsubgraph25; 
+ The successors of CPUsubgraph22: NPUsubgraph26; CPUsubgraph24; 
+CPUsubgraph23: order14
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/Reshape_7:0; size:8 77 40 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/Reshape_4:0; size:8 40 77 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/Reshape_3:0; size:8 1024 40 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/MatMul_1:0; size:8 1024 40 
+ The predecessors of CPUsubgraph23: NPUsubgraph16; NPUsubgraph17; NPUsubgraph26; 
+ The successors of CPUsubgraph23: NPUsubgraph27; 
+CPUsubgraph24: order16
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/add:0; size:1 1024 320 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/dense_11/Tensordot/Reshape:0; size:1024 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/dense_13/Tensordot/MatMul:0; size:1024 320 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/add_1:0; size:1 1024 320 
+ The predecessors of CPUsubgraph24: CPUsubgraph22; NPUsubgraph27; 
+ The successors of CPUsubgraph24: NPUsubgraph28; 
+CPUsubgraph25: order19
+Inputs:Conv__2149:0; size:1 320 16 16 
+Outputs:Transpose__3005:0; size:1 16 16 320 
+ The predecessors of CPUsubgraph25: NPUsubgraph29; 
+ The successors of CPUsubgraph25: CPUsubgraph26; 
+CPUsubgraph26: order20
+Inputs:Transpose__3005:0; size:1 16 16 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_1/group_normalization_3/batchnorm/add_1:0; size:1 16 16 32 10 
+ The predecessors of CPUsubgraph26: CPUsubgraph25; 
+ The successors of CPUsubgraph26: NPUsubgraph31; 
+CPUsubgraph27: order22
+Inputs:Transpose__2183:0; size:1 16 16 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_1/group_normalization_4/batchnorm/add_1:0; size:1 16 16 32 20 
+ The predecessors of CPUsubgraph27: NPUsubgraph31; 
+ The successors of CPUsubgraph27: NPUsubgraph32; 
+CPUsubgraph28: order24
+Inputs:Transpose__2169:0; size:1 16 16 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/group_normalization_5/batchnorm/add_1:0; size:1 16 16 32 20 
+ The predecessors of CPUsubgraph28: NPUsubgraph32; 
+ The successors of CPUsubgraph28: NPUsubgraph33; 
+CPUsubgraph29: order26
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/Reshape:0; size:1 256 640 
+Outputs:_v_2573; size:256 640 _v_2572; size:256 640 _v_2571; size:256 640 
+ The predecessors of CPUsubgraph29: NPUsubgraph33; 
+ The successors of CPUsubgraph29: NPUsubgraph34; NPUsubgraph35; NPUsubgraph36; 
+CPUsubgraph30: order28
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_2/Reshape_7:0; size:8 256 80 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_2/Reshape_4:0; size:8 80 256 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_2/Reshape_3:0; size:8 256 80 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_2/MatMul_1:0; size:8 256 80 
+ The predecessors of CPUsubgraph30: NPUsubgraph34; NPUsubgraph35; NPUsubgraph36; 
+ The successors of CPUsubgraph30: NPUsubgraph37; 
+CPUsubgraph31: order30
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/Reshape:0; size:1 256 640 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_2/dense_18/Tensordot/Reshape:0; size:256 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_3/dense_19/Tensordot/MatMul:0; size:256 640 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/add:0; size:1 256 640 
+ The predecessors of CPUsubgraph31: NPUsubgraph33; NPUsubgraph37; 
+ The successors of CPUsubgraph31: NPUsubgraph38; CPUsubgraph33; 
+CPUsubgraph32: order32
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_3/Reshape_7:0; size:8 77 80 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_3/Reshape_4:0; size:8 80 77 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_3/Reshape_3:0; size:8 256 80 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_3/MatMul_1:0; size:8 256 80 
+ The predecessors of CPUsubgraph32: NPUsubgraph14; NPUsubgraph15; NPUsubgraph38; 
+ The successors of CPUsubgraph32: NPUsubgraph39; 
+CPUsubgraph33: order34
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/add:0; size:1 256 640 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_3/dense_22/Tensordot/Reshape:0; size:256 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/dense_24/Tensordot/MatMul:0; size:256 640 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/add_1:0; size:1 256 640 
+ The predecessors of CPUsubgraph33: CPUsubgraph31; NPUsubgraph39; 
+ The successors of CPUsubgraph33: NPUsubgraph40; 
+CPUsubgraph34: order37
+Inputs:Conv__2195:0; size:1 640 8 8 
+Outputs:Transpose__3001:0; size:1 8 8 640 
+ The predecessors of CPUsubgraph34: NPUsubgraph41; 
+ The successors of CPUsubgraph34: CPUsubgraph35; 
+CPUsubgraph35: order38
+Inputs:Transpose__3001:0; size:1 8 8 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_2/group_normalization_6/batchnorm/add_1:0; size:1 8 8 32 20 
+ The predecessors of CPUsubgraph35: CPUsubgraph34; 
+ The successors of CPUsubgraph35: NPUsubgraph43; 
+CPUsubgraph36: order40
+Inputs:Transpose__2233:0; size:1 8 8 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_2/group_normalization_7/batchnorm/add_1:0; size:1 8 8 32 40 
+ The predecessors of CPUsubgraph36: NPUsubgraph43; 
+ The successors of CPUsubgraph36: NPUsubgraph44; 
+CPUsubgraph37: order42
+Inputs:Transpose__2211:0; size:1 8 8 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/group_normalization_8/batchnorm/add_1:0; size:1 8 8 32 40 
+ The predecessors of CPUsubgraph37: NPUsubgraph44; 
+ The successors of CPUsubgraph37: NPUsubgraph45; 
+CPUsubgraph38: order44
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/Reshape:0; size:1 64 1280 
+Outputs:_v_2580; size:64 1280 _v_2579; size:64 1280 _v_2578; size:64 1280 
+ The predecessors of CPUsubgraph38: NPUsubgraph45; 
+ The successors of CPUsubgraph38: NPUsubgraph46; NPUsubgraph47; NPUsubgraph48; 
+CPUsubgraph39: order46
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_4/Reshape_7:0; size:8 64 160 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_4/Reshape_4:0; size:8 160 64 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_4/Reshape_3:0; size:8 64 160 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_4/MatMul_1:0; size:8 64 160 
+ The predecessors of CPUsubgraph39: NPUsubgraph46; NPUsubgraph47; NPUsubgraph48; 
+ The successors of CPUsubgraph39: NPUsubgraph49; 
+CPUsubgraph40: order48
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/Reshape:0; size:1 64 1280 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_4/dense_29/Tensordot/Reshape:0; size:64 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_5/dense_30/Tensordot/MatMul:0; size:64 1280 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/add:0; size:1 64 1280 
+ The predecessors of CPUsubgraph40: NPUsubgraph45; NPUsubgraph49; 
+ The successors of CPUsubgraph40: NPUsubgraph50; CPUsubgraph42; 
+CPUsubgraph41: order50
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_5/Reshape_7:0; size:8 77 160 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_5/Reshape_4:0; size:8 160 77 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_5/Reshape_3:0; size:8 64 160 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_5/MatMul_1:0; size:8 64 160 
+ The predecessors of CPUsubgraph41: NPUsubgraph12; NPUsubgraph13; NPUsubgraph50; 
+ The successors of CPUsubgraph41: NPUsubgraph51; 
+CPUsubgraph42: order52
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/add:0; size:1 64 1280 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_5/dense_33/Tensordot/Reshape:0; size:64 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/dense_35/Tensordot/MatMul:0; size:64 1280 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/add_1:0; size:1 64 1280 
+ The predecessors of CPUsubgraph42: CPUsubgraph40; NPUsubgraph51; 
+ The successors of CPUsubgraph42: NPUsubgraph52; 
+CPUsubgraph43: order54
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_2/add:0; size:1 1280 8 8 
+Outputs:Transpose__2541:0; size:1 8 8 2560 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/concat:0; size:1 2560 8 8 
+ The predecessors of CPUsubgraph43: NPUsubgraph52; 
+ The successors of CPUsubgraph43: NPUsubgraph53; CPUsubgraph44; 
+CPUsubgraph44: order55
+Inputs:Transpose__2541:0; size:1 8 8 2560 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_3/group_normalization_9/batchnorm/add_1:0; size:1 8 8 32 80 
+ The predecessors of CPUsubgraph44: CPUsubgraph43; 
+ The successors of CPUsubgraph44: NPUsubgraph54; 
+CPUsubgraph45: order57
+Inputs:Transpose__2265:0; size:1 8 8 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_3/group_normalization_10/batchnorm/add_1:0; size:1 8 8 32 40 
+ The predecessors of CPUsubgraph45: NPUsubgraph54; 
+ The successors of CPUsubgraph45: NPUsubgraph55; 
+CPUsubgraph46: order59
+Inputs:Transpose__2247:0; size:1 8 8 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/group_normalization_11/batchnorm/add_1:0; size:1 8 8 32 40 
+ The predecessors of CPUsubgraph46: NPUsubgraph55; 
+ The successors of CPUsubgraph46: NPUsubgraph56; 
+CPUsubgraph47: order61
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/Reshape:0; size:1 64 1280 
+Outputs:_v_2587; size:64 1280 _v_2586; size:64 1280 _v_2585; size:64 1280 
+ The predecessors of CPUsubgraph47: NPUsubgraph56; 
+ The successors of CPUsubgraph47: NPUsubgraph57; NPUsubgraph58; NPUsubgraph59; 
+CPUsubgraph48: order63
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_6/Reshape_7:0; size:8 64 160 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_6/Reshape_4:0; size:8 160 64 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_6/Reshape_3:0; size:8 64 160 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_6/MatMul_1:0; size:8 64 160 
+ The predecessors of CPUsubgraph48: NPUsubgraph57; NPUsubgraph58; NPUsubgraph59; 
+ The successors of CPUsubgraph48: NPUsubgraph60; 
+CPUsubgraph49: order65
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/Reshape:0; size:1 64 1280 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_6/dense_40/Tensordot/Reshape:0; size:64 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_7/dense_41/Tensordot/MatMul:0; size:64 1280 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/add:0; size:1 64 1280 
+ The predecessors of CPUsubgraph49: NPUsubgraph56; NPUsubgraph60; 
+ The successors of CPUsubgraph49: NPUsubgraph61; CPUsubgraph51; 
+CPUsubgraph50: order67
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_7/Reshape_7:0; size:8 77 160 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_7/Reshape_4:0; size:8 160 77 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_7/Reshape_3:0; size:8 64 160 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_7/MatMul_1:0; size:8 64 160 
+ The predecessors of CPUsubgraph50: NPUsubgraph10; NPUsubgraph11; NPUsubgraph61; 
+ The successors of CPUsubgraph50: NPUsubgraph62; 
+CPUsubgraph51: order69
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/add:0; size:1 64 1280 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_7/dense_44/Tensordot/Reshape:0; size:64 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/dense_46/Tensordot/MatMul:0; size:64 1280 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/add_1:0; size:1 64 1280 
+ The predecessors of CPUsubgraph51: CPUsubgraph49; NPUsubgraph62; 
+ The successors of CPUsubgraph51: NPUsubgraph63; 
+CPUsubgraph52: order71
+Inputs:Conv__2195:0; size:1 640 8 8 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_3/add:0; size:1 1280 8 8 
+Outputs:Transpose__2521:0; size:1 8 8 1920 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/concat_1:0; size:1 1920 8 8 
+ The predecessors of CPUsubgraph52: NPUsubgraph41; NPUsubgraph63; 
+ The successors of CPUsubgraph52: NPUsubgraph64; CPUsubgraph53; 
+CPUsubgraph53: order72
+Inputs:Transpose__2521:0; size:1 8 8 1920 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_4/group_normalization_12/batchnorm/add_1:0; size:1 8 8 32 60 
+ The predecessors of CPUsubgraph53: CPUsubgraph52; 
+ The successors of CPUsubgraph53: NPUsubgraph65; 
+CPUsubgraph54: order74
+Inputs:Transpose__2305:0; size:1 8 8 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_4/group_normalization_13/batchnorm/add_1:0; size:1 8 8 32 40 
+ The predecessors of CPUsubgraph54: NPUsubgraph65; 
+ The successors of CPUsubgraph54: NPUsubgraph66; 
+CPUsubgraph55: order76
+Inputs:Transpose__2291:0; size:1 8 8 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/group_normalization_14/batchnorm/add_1:0; size:1 8 8 32 40 
+ The predecessors of CPUsubgraph55: NPUsubgraph66; 
+ The successors of CPUsubgraph55: NPUsubgraph67; 
+CPUsubgraph56: order78
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/Reshape:0; size:1 64 1280 
+Outputs:_v_2594; size:64 1280 _v_2593; size:64 1280 _v_2592; size:64 1280 
+ The predecessors of CPUsubgraph56: NPUsubgraph67; 
+ The successors of CPUsubgraph56: NPUsubgraph68; NPUsubgraph69; NPUsubgraph70; 
+CPUsubgraph57: order80
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_8/Reshape_4:0; size:8 160 64 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_8/Reshape_7:0; size:8 64 160 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_8/Reshape_3:0; size:8 64 160 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_8/MatMul_1:0; size:8 64 160 
+ The predecessors of CPUsubgraph57: NPUsubgraph69; NPUsubgraph68; NPUsubgraph70; 
+ The successors of CPUsubgraph57: NPUsubgraph71; 
+CPUsubgraph58: order82
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/Reshape:0; size:1 64 1280 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_8/dense_51/Tensordot/Reshape:0; size:64 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_9/dense_52/Tensordot/MatMul:0; size:64 1280 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/add:0; size:1 64 1280 
+ The predecessors of CPUsubgraph58: NPUsubgraph67; NPUsubgraph71; 
+ The successors of CPUsubgraph58: NPUsubgraph72; CPUsubgraph60; 
+CPUsubgraph59: order84
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_9/Reshape_7:0; size:8 77 160 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_9/Reshape_4:0; size:8 160 77 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_9/Reshape_3:0; size:8 64 160 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_9/MatMul_1:0; size:8 64 160 
+ The predecessors of CPUsubgraph59: NPUsubgraph8; NPUsubgraph9; NPUsubgraph72; 
+ The successors of CPUsubgraph59: NPUsubgraph73; 
+CPUsubgraph60: order86
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/add:0; size:1 64 1280 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_9/dense_55/Tensordot/Reshape:0; size:64 1280 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/dense_57/Tensordot/MatMul:0; size:64 1280 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/add_1:0; size:1 64 1280 
+ The predecessors of CPUsubgraph60: CPUsubgraph58; NPUsubgraph73; 
+ The successors of CPUsubgraph60: NPUsubgraph74; 
+CPUsubgraph61: order88
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_4/add:0; size:1 1280 8 8 
+Outputs:Resize__1327:0; size:1 1280 16 16 
+ The predecessors of CPUsubgraph61: NPUsubgraph74; 
+ The successors of CPUsubgraph61: NPUsubgraph75; 
+CPUsubgraph62: order90
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_1/add:0; size:1 640 16 16 Conv__2309:0; size:1 1280 16 16 
+Outputs:Transpose__2313:0; size:1 16 16 1920 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/concat_2:0; size:1 1920 16 16 
+ The predecessors of CPUsubgraph62: NPUsubgraph40; NPUsubgraph75; 
+ The successors of CPUsubgraph62: NPUsubgraph76; CPUsubgraph63; 
+CPUsubgraph63: order91
+Inputs:Transpose__2313:0; size:1 16 16 1920 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_5/group_normalization_15/batchnorm/add_1:0; size:1 16 16 32 60 
+ The predecessors of CPUsubgraph63: CPUsubgraph62; 
+ The successors of CPUsubgraph63: NPUsubgraph77; 
+CPUsubgraph64: order93
+Inputs:Transpose__2347:0; size:1 16 16 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_5/group_normalization_16/batchnorm/add_1:0; size:1 16 16 32 20 
+ The predecessors of CPUsubgraph64: NPUsubgraph77; 
+ The successors of CPUsubgraph64: NPUsubgraph78; 
+CPUsubgraph65: order95
+Inputs:Transpose__2329:0; size:1 16 16 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/group_normalization_17/batchnorm/add_1:0; size:1 16 16 32 20 
+ The predecessors of CPUsubgraph65: NPUsubgraph78; 
+ The successors of CPUsubgraph65: NPUsubgraph79; 
+CPUsubgraph66: order97
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/Reshape:0; size:1 256 640 
+Outputs:_v_2601; size:256 640 _v_2600; size:256 640 _v_2599; size:256 640 
+ The predecessors of CPUsubgraph66: NPUsubgraph79; 
+ The successors of CPUsubgraph66: NPUsubgraph80; NPUsubgraph81; NPUsubgraph82; 
+CPUsubgraph67: order99
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_10/Reshape_7:0; size:8 256 80 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_10/Reshape_4:0; size:8 80 256 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_10/Reshape_3:0; size:8 256 80 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_10/MatMul_1:0; size:8 256 80 
+ The predecessors of CPUsubgraph67: NPUsubgraph80; NPUsubgraph81; NPUsubgraph82; 
+ The successors of CPUsubgraph67: NPUsubgraph83; 
+CPUsubgraph68: order101
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/Reshape:0; size:1 256 640 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_10/dense_62/Tensordot/Reshape:0; size:256 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_11/dense_63/Tensordot/MatMul:0; size:256 640 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/add:0; size:1 256 640 
+ The predecessors of CPUsubgraph68: NPUsubgraph79; NPUsubgraph83; 
+ The successors of CPUsubgraph68: NPUsubgraph84; CPUsubgraph70; 
+CPUsubgraph69: order103
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_11/Reshape_7:0; size:8 77 80 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_11/Reshape_4:0; size:8 80 77 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_11/Reshape_3:0; size:8 256 80 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_11/MatMul_1:0; size:8 256 80 
+ The predecessors of CPUsubgraph69: NPUsubgraph6; NPUsubgraph7; NPUsubgraph84; 
+ The successors of CPUsubgraph69: NPUsubgraph85; 
+CPUsubgraph70: order105
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/add:0; size:1 256 640 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_11/dense_66/Tensordot/Reshape:0; size:256 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/dense_68/Tensordot/MatMul:0; size:256 640 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/add_1:0; size:1 256 640 
+ The predecessors of CPUsubgraph70: CPUsubgraph68; NPUsubgraph85; 
+ The successors of CPUsubgraph70: NPUsubgraph86; 
+CPUsubgraph71: order107
+Inputs:Conv__2149:0; size:1 320 16 16 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_5/add:0; size:1 640 16 16 
+Outputs:Transpose__2497:0; size:1 16 16 960 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/concat_3:0; size:1 960 16 16 
+ The predecessors of CPUsubgraph71: NPUsubgraph29; NPUsubgraph86; 
+ The successors of CPUsubgraph71: NPUsubgraph87; CPUsubgraph72; 
+CPUsubgraph72: order108
+Inputs:Transpose__2497:0; size:1 16 16 960 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_6/group_normalization_18/batchnorm/add_1:0; size:1 16 16 32 30 
+ The predecessors of CPUsubgraph72: CPUsubgraph71; 
+ The successors of CPUsubgraph72: NPUsubgraph88; 
+CPUsubgraph73: order110
+Inputs:Transpose__2383:0; size:1 16 16 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_6/group_normalization_19/batchnorm/add_1:0; size:1 16 16 32 20 
+ The predecessors of CPUsubgraph73: NPUsubgraph88; 
+ The successors of CPUsubgraph73: NPUsubgraph89; 
+CPUsubgraph74: order112
+Inputs:Transpose__2365:0; size:1 16 16 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/group_normalization_20/batchnorm/add_1:0; size:1 16 16 32 20 
+ The predecessors of CPUsubgraph74: NPUsubgraph89; 
+ The successors of CPUsubgraph74: NPUsubgraph90; 
+CPUsubgraph75: order114
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/Reshape:0; size:1 256 640 
+Outputs:_v_2608; size:256 640 _v_2607; size:256 640 _v_2606; size:256 640 
+ The predecessors of CPUsubgraph75: NPUsubgraph90; 
+ The successors of CPUsubgraph75: NPUsubgraph91; NPUsubgraph92; NPUsubgraph93; 
+CPUsubgraph76: order116
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_12/Reshape_7:0; size:8 256 80 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_12/Reshape_4:0; size:8 80 256 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_12/Reshape_3:0; size:8 256 80 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_12/MatMul_1:0; size:8 256 80 
+ The predecessors of CPUsubgraph76: NPUsubgraph91; NPUsubgraph92; NPUsubgraph93; 
+ The successors of CPUsubgraph76: NPUsubgraph94; 
+CPUsubgraph77: order118
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/Reshape:0; size:1 256 640 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_12/dense_73/Tensordot/Reshape:0; size:256 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_13/dense_74/Tensordot/MatMul:0; size:256 640 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/add:0; size:1 256 640 
+ The predecessors of CPUsubgraph77: NPUsubgraph90; NPUsubgraph94; 
+ The successors of CPUsubgraph77: NPUsubgraph95; CPUsubgraph79; 
+CPUsubgraph78: order120
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_13/Reshape_7:0; size:8 77 80 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_13/Reshape_4:0; size:8 80 77 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_13/Reshape_3:0; size:8 256 80 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_13/MatMul_1:0; size:8 256 80 
+ The predecessors of CPUsubgraph78: NPUsubgraph4; NPUsubgraph5; NPUsubgraph95; 
+ The successors of CPUsubgraph78: NPUsubgraph96; 
+CPUsubgraph79: order122
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/add:0; size:1 256 640 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_13/dense_77/Tensordot/Reshape:0; size:256 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/dense_79/Tensordot/MatMul:0; size:256 640 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/add_1:0; size:1 256 640 
+ The predecessors of CPUsubgraph79: CPUsubgraph77; NPUsubgraph96; 
+ The successors of CPUsubgraph79: NPUsubgraph97; 
+CPUsubgraph80: order124
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_6/add:0; size:1 640 16 16 
+Outputs:Resize__1707:0; size:1 640 32 32 
+ The predecessors of CPUsubgraph80: NPUsubgraph97; 
+ The successors of CPUsubgraph80: NPUsubgraph98; 
+CPUsubgraph81: order126
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer/add:0; size:1 320 32 32 Conv__2387:0; size:1 640 32 32 
+Outputs:Transpose__2391:0; size:1 32 32 960 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/concat_4:0; size:1 960 32 32 
+ The predecessors of CPUsubgraph81: NPUsubgraph28; NPUsubgraph98; 
+ The successors of CPUsubgraph81: NPUsubgraph99; CPUsubgraph82; 
+CPUsubgraph82: order127
+Inputs:Transpose__2391:0; size:1 32 32 960 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_7/group_normalization_21/batchnorm/add_1:0; size:1 32 32 32 30 
+ The predecessors of CPUsubgraph82: CPUsubgraph81; 
+ The successors of CPUsubgraph82: NPUsubgraph100; 
+CPUsubgraph83: order129
+Inputs:Transpose__2421:0; size:1 32 32 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_7/group_normalization_22/batchnorm/add_1:0; size:1 32 32 32 10 
+ The predecessors of CPUsubgraph83: NPUsubgraph100; 
+ The successors of CPUsubgraph83: NPUsubgraph101; 
+CPUsubgraph84: order131
+Inputs:Transpose__2411:0; size:1 32 32 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/group_normalization_23/batchnorm/add_1:0; size:1 32 32 32 10 
+ The predecessors of CPUsubgraph84: NPUsubgraph101; 
+ The successors of CPUsubgraph84: NPUsubgraph102; 
+CPUsubgraph85: order133
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/Reshape:0; size:1 1024 320 
+Outputs:_v_2615; size:1024 320 _v_2614; size:1024 320 _v_2613; size:1024 320 
+ The predecessors of CPUsubgraph85: NPUsubgraph102; 
+ The successors of CPUsubgraph85: NPUsubgraph103; NPUsubgraph104; NPUsubgraph105; 
+CPUsubgraph86: order135
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_14/Reshape_4:0; size:8 40 1024 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_14/Reshape_7:0; size:8 1024 40 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_14/Reshape_3:0; size:8 1024 40 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_14/MatMul_1:0; size:8 1024 40 
+ The predecessors of CPUsubgraph86: NPUsubgraph104; NPUsubgraph103; NPUsubgraph105; 
+ The successors of CPUsubgraph86: NPUsubgraph106; 
+CPUsubgraph87: order137
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/Reshape:0; size:1 1024 320 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_14/dense_84/Tensordot/Reshape:0; size:1024 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_15/dense_85/Tensordot/MatMul:0; size:1024 320 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/add:0; size:1 1024 320 
+ The predecessors of CPUsubgraph87: NPUsubgraph102; NPUsubgraph106; 
+ The successors of CPUsubgraph87: NPUsubgraph107; CPUsubgraph89; 
+CPUsubgraph88: order139
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_15/Reshape_7:0; size:8 77 40 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_15/Reshape_4:0; size:8 40 77 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_15/Reshape_3:0; size:8 1024 40 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_15/MatMul_1:0; size:8 1024 40 
+ The predecessors of CPUsubgraph88: NPUsubgraph2; NPUsubgraph3; NPUsubgraph107; 
+ The successors of CPUsubgraph88: NPUsubgraph108; 
+CPUsubgraph89: order141
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/add:0; size:1 1024 320 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_15/dense_88/Tensordot/Reshape:0; size:1024 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/dense_90/Tensordot/MatMul:0; size:1024 320 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/add_1:0; size:1 1024 320 
+ The predecessors of CPUsubgraph89: CPUsubgraph87; NPUsubgraph108; 
+ The successors of CPUsubgraph89: NPUsubgraph109; 
+CPUsubgraph90: order143
+Inputs:Conv__2107:0; size:1 320 32 32 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_7/add:0; size:1 320 32 32 
+Outputs:Transpose__2481:0; size:1 32 32 640 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/concat_5:0; size:1 640 32 32 
+ The predecessors of CPUsubgraph90: NPUsubgraph18; NPUsubgraph109; 
+ The successors of CPUsubgraph90: NPUsubgraph110; CPUsubgraph91; 
+CPUsubgraph91: order144
+Inputs:Transpose__2481:0; size:1 32 32 640 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_8/group_normalization_24/batchnorm/add_1:0; size:1 32 32 32 20 
+ The predecessors of CPUsubgraph91: CPUsubgraph90; 
+ The successors of CPUsubgraph91: NPUsubgraph111; 
+CPUsubgraph92: order146
+Inputs:Transpose__2461:0; size:1 32 32 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/res_block_8/group_normalization_25/batchnorm/add_1:0; size:1 32 32 32 10 
+ The predecessors of CPUsubgraph92: NPUsubgraph111; 
+ The successors of CPUsubgraph92: NPUsubgraph112; 
+CPUsubgraph93: order148
+Inputs:Transpose__2443:0; size:1 32 32 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/group_normalization_26/batchnorm/add_1:0; size:1 32 32 32 10 
+ The predecessors of CPUsubgraph93: NPUsubgraph112; 
+ The successors of CPUsubgraph93: NPUsubgraph113; 
+CPUsubgraph94: order150
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/Reshape:0; size:1 1024 320 
+Outputs:_v_2622; size:1024 320 _v_2621; size:1024 320 _v_2620; size:1024 320 
+ The predecessors of CPUsubgraph94: NPUsubgraph113; 
+ The successors of CPUsubgraph94: NPUsubgraph114; NPUsubgraph115; NPUsubgraph116; 
+CPUsubgraph95: order152
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_16/Reshape_7:0; size:8 1024 40 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_16/Reshape_4:0; size:8 40 1024 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_16/Reshape_3:0; size:8 1024 40 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_16/MatMul_1:0; size:8 1024 40 
+ The predecessors of CPUsubgraph95: NPUsubgraph114; NPUsubgraph115; NPUsubgraph116; 
+ The successors of CPUsubgraph95: NPUsubgraph117; 
+CPUsubgraph96: order154
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/Reshape:0; size:1 1024 320 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_16/dense_95/Tensordot/Reshape:0; size:1024 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_17/dense_96/Tensordot/MatMul:0; size:1024 320 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/add:0; size:1 1024 320 
+ The predecessors of CPUsubgraph96: NPUsubgraph113; NPUsubgraph117; 
+ The successors of CPUsubgraph96: NPUsubgraph118; CPUsubgraph98; 
+CPUsubgraph97: order156
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_17/Reshape_7:0; size:8 77 40 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_17/Reshape_4:0; size:8 40 77 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_17/Reshape_3:0; size:8 1024 40 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_17/MatMul_1:0; size:8 1024 40 
+ The predecessors of CPUsubgraph97: NPUsubgraph0; NPUsubgraph1; NPUsubgraph118; 
+ The successors of CPUsubgraph97: NPUsubgraph119; 
+CPUsubgraph98: order158
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/add:0; size:1 1024 320 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_17/dense_99/Tensordot/Reshape:0; size:1024 320 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/dense_101/Tensordot/MatMul:0; size:1024 320 StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/add_1:0; size:1 1024 320 
+ The predecessors of CPUsubgraph98: CPUsubgraph96; NPUsubgraph119; 
+ The successors of CPUsubgraph98: NPUsubgraph120; 
+CPUsubgraph99: order160
+Inputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/spatial_transformer_8/add:0; size:1 320 32 32 
+Outputs:StatefulPartitionedCall/model/bk_tiny_lcmu_net_model/padded_conv2d_49/conv2d_49/Conv2D__154:0; size:1 320 32 32 
+ The predecessors of CPUsubgraph99: NPUsubgraph120; 
+ The successors of CPUsubgraph99: NPUsubgraph121; 
+CPUsubgraph100: order162
+Inputs:Conv__2473:0; size:1 4 32 32 
+Outputs:bk_tiny_lcmu_net_model; size:1 32 32 4 
+ The predecessors of CPUsubgraph100: NPUsubgraph121; 
+ The successors of CPUsubgraph100: 

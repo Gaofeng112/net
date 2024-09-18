@@ -1,0 +1,552 @@
+Model: cpusubgraph0
+Inputs:
+  TFLite: serving_default_input_1:0 -> ONNX: /down_blocks.0/resnets.0/conv1/Conv_output_0
+  TFLite: serving_default_input_2:0 -> ONNX: timestep
+Outputs:
+  TFLite: StatefulPartitionedCall:1 -> ONNX: /down_blocks.0/resnets.0/act_1/Mul_output_0
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /down_blocks.0/resnets.0/norm2/InstanceNormalization_output_0
+
+Model: cpusubgraph1
+Inputs:
+  TFLite: serving_default_input_3:0 -> ONNX: /down_blocks.0/resnets.0/norm1/Reshape_output_0
+Outputs:
+  TFLite: PartitionedCall:0 -> ONNX: /down_blocks.0/resnets.0/norm1/InstanceNormalization_output_0
+
+Model: cpusubgraph10
+Inputs:
+  TFLite: serving_default_input_4:0 -> ONNX: /down_blocks.2/resnets.0/norm1/Reshape_output_0
+Outputs:
+  TFLite: PartitionedCall:0 -> ONNX: /down_blocks.2/resnets.0/norm1/InstanceNormalization_output_0
+
+Model: cpusubgraph11
+Inputs:
+  TFLite: serving_default_input_6:0 -> ONNX: /down_blocks.0/resnets.0/act_1/Mul_output_0
+  TFLite: serving_default_input_5:0 -> ONNX: /down_blocks.2/resnets.0/conv1/Conv_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /down_blocks.2/resnets.0/norm2/InstanceNormalization_output_0
+
+Model: cpusubgraph12
+Inputs:
+  TFLite: serving_default_input_7:0 -> ONNX: /down_blocks.2/attentions.0/norm/Reshape_output_0
+Outputs:
+  TFLite: PartitionedCall:0 -> ONNX: /down_blocks.2/attentions.0/norm/Reshape_1_output_0
+
+Model: cpusubgraph13
+Inputs:
+  TFLite: serving_default_input_8:0 -> ONNX: encoder_hidden_states
+  TFLite: serving_default_input_9:0 -> ONNX: /down_blocks.2/attentions.0/proj_in/Conv_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /down_blocks.2/attentions.0/Transpose_1_output_0
+
+Model: cpusubgraph14
+Inputs:
+  TFLite: serving_default_input_10:0 -> ONNX: /down_blocks.2/resnets.0/Add_1_output_0
+  TFLite: serving_default_input_11:0 -> ONNX: /down_blocks.2/attentions.0/proj_out/Conv_output_0
+Outputs:
+  TFLite: PartitionedCall:1 -> ONNX: /up_blocks.0/Concat_output_0
+  TFLite: PartitionedCall:0 -> ONNX: /up_blocks.0/resnets.0/norm1/InstanceNormalization_output_0
+
+Model: cpusubgraph15
+Inputs:
+  TFLite: serving_default_input_13:0 -> ONNX: /down_blocks.0/resnets.0/act_1/Mul_output_0
+  TFLite: serving_default_input_12:0 -> ONNX: /up_blocks.0/resnets.0/conv1/Conv_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.0/resnets.0/norm2/InstanceNormalization_output_0
+
+Model: cpusubgraph16
+Inputs:
+  TFLite: serving_default_input_14:0 -> ONNX: /up_blocks.0/attentions.0/norm/Reshape_output_0
+Outputs:
+  TFLite: PartitionedCall:0 -> ONNX: /up_blocks.0/attentions.0/norm/Reshape_1_output_0
+
+Model: cpusubgraph17
+Inputs:
+  TFLite: serving_default_input_16:0 -> ONNX: /up_blocks.0/attentions.0/proj_in/Conv_output_0
+  TFLite: serving_default_input_15:0 -> ONNX: encoder_hidden_states
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.0/attentions.0/Transpose_1_output_0
+
+Model: cpusubgraph18
+Inputs:
+  TFLite: serving_default_input_19:0 -> ONNX: /up_blocks.0/resnets.0/Add_1_output_0
+  TFLite: serving_default_input_18:0 -> ONNX: /down_blocks.1/downsamplers.0/conv/Conv_output_0
+  TFLite: serving_default_input_17:0 -> ONNX: /up_blocks.0/attentions.0/proj_out/Conv_output_0
+Outputs:
+  TFLite: PartitionedCall:0 -> ONNX: /up_blocks.0/resnets.1/norm1/InstanceNormalization_output_0
+  TFLite: PartitionedCall:1 -> ONNX: /up_blocks.0/Concat_1_output_0
+
+Model: cpusubgraph19
+Inputs:
+  TFLite: serving_default_input_21:0 -> ONNX: /down_blocks.0/resnets.0/act_1/Mul_output_0
+  TFLite: serving_default_input_20:0 -> ONNX: /up_blocks.0/resnets.1/conv1/Conv_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.0/resnets.1/norm2/InstanceNormalization_output_0
+
+Model: cpusubgraph2
+Inputs:
+  TFLite: serving_default_input_23:0 -> ONNX: /down_blocks.0/resnets.0/conv2/Conv_output_0
+  TFLite: serving_default_input_22:0 -> ONNX: /conv_in/Conv_output_0
+Outputs:
+  TFLite: PartitionedCall:0 -> ONNX: /down_blocks.0/resnets.0/Add_1_output_0
+  TFLite: PartitionedCall:1 -> ONNX: /down_blocks.0/attentions.0/norm/Reshape_1_output_0
+
+Model: cpusubgraph20
+Inputs:
+  TFLite: serving_default_input_24:0 -> ONNX: /up_blocks.0/attentions.1/norm/Reshape_output_0
+Outputs:
+  TFLite: PartitionedCall:0 -> ONNX: /up_blocks.0/attentions.1/norm/Reshape_1_output_0
+
+Model: cpusubgraph21
+Inputs:
+  TFLite: serving_default_input_25:0 -> ONNX: encoder_hidden_states
+  TFLite: serving_default_input_26:0 -> ONNX: /up_blocks.0/attentions.1/proj_in/Conv_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.0/attentions.1/Transpose_1_output_0
+
+Model: cpusubgraph22
+Inputs:
+  TFLite: serving_default_input_27:0 -> ONNX: /up_blocks.0/resnets.1/Add_1_output_0
+  TFLite: serving_default_input_28:0 -> ONNX: /up_blocks.0/attentions.1/proj_out/Conv_output_0
+Outputs:
+  TFLite: PartitionedCall:0 -> ONNX: /up_blocks.0/upsamplers.0/Resize_output_0
+
+Model: cpusubgraph23
+Inputs:
+  TFLite: serving_default_input_29:0 -> ONNX: /down_blocks.1/attentions.0/Add_output_0
+  TFLite: serving_default_input_30:0 -> ONNX: /up_blocks.0/upsamplers.0/conv/Conv_output_0
+Outputs:
+  TFLite: PartitionedCall:1 -> ONNX: /up_blocks.1/Concat_output_0
+  TFLite: PartitionedCall:0 -> ONNX: /up_blocks.1/resnets.0/norm1/InstanceNormalization_output_0
+
+Model: cpusubgraph24
+Inputs:
+  TFLite: serving_default_input_31:0 -> ONNX: /up_blocks.1/resnets.0/conv1/Conv_output_0
+  TFLite: serving_default_input_32:0 -> ONNX: /down_blocks.0/resnets.0/act_1/Mul_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.1/resnets.0/norm2/InstanceNormalization_output_0
+
+Model: cpusubgraph25
+Inputs:
+  TFLite: serving_default_input_33:0 -> ONNX: /up_blocks.1/attentions.0/norm/Reshape_output_0
+Outputs:
+  TFLite: PartitionedCall:0 -> ONNX: /up_blocks.1/attentions.0/norm/Reshape_1_output_0
+
+Model: cpusubgraph26
+Inputs:
+  TFLite: serving_default_input_34:0 -> ONNX: encoder_hidden_states
+  TFLite: serving_default_input_35:0 -> ONNX: /up_blocks.1/attentions.0/proj_in/Conv_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.1/attentions.0/Transpose_1_output_0
+
+Model: cpusubgraph27
+Inputs:
+  TFLite: serving_default_input_37:0 -> ONNX: /up_blocks.1/resnets.0/Add_1_output_0
+  TFLite: serving_default_input_38:0 -> ONNX: /up_blocks.1/attentions.0/proj_out/Conv_output_0
+  TFLite: serving_default_input_36:0 -> ONNX: /down_blocks.0/downsamplers.0/conv/Conv_output_0
+Outputs:
+  TFLite: PartitionedCall:1 -> ONNX: /up_blocks.1/Concat_1_output_0
+  TFLite: PartitionedCall:0 -> ONNX: /up_blocks.1/resnets.1/norm1/InstanceNormalization_output_0
+
+Model: cpusubgraph28
+Inputs:
+  TFLite: serving_default_input_39:0 -> ONNX: /up_blocks.1/resnets.1/conv1/Conv_output_0
+  TFLite: serving_default_input_40:0 -> ONNX: /down_blocks.0/resnets.0/act_1/Mul_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.1/resnets.1/norm2/InstanceNormalization_output_0
+
+Model: cpusubgraph29
+Inputs:
+  TFLite: serving_default_input_41:0 -> ONNX: /up_blocks.1/attentions.1/norm/Reshape_output_0
+Outputs:
+  TFLite: PartitionedCall:0 -> ONNX: /up_blocks.1/attentions.1/norm/Reshape_1_output_0
+
+Model: cpusubgraph3
+Inputs:
+  TFLite: serving_default_input_42:0 -> ONNX: encoder_hidden_states
+  TFLite: serving_default_input_43:0 -> ONNX: /down_blocks.0/attentions.0/proj_in/Conv_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /down_blocks.0/attentions.0/Transpose_1_output_0
+
+Model: cpusubgraph30
+Inputs:
+  TFLite: serving_default_input_45:0 -> ONNX: /up_blocks.1/attentions.1/proj_in/Conv_output_0
+  TFLite: serving_default_input_44:0 -> ONNX: encoder_hidden_states
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.1/attentions.1/Transpose_1_output_0
+
+Model: cpusubgraph31
+Inputs:
+  TFLite: serving_default_input_46:0 -> ONNX: /up_blocks.1/resnets.1/Add_1_output_0
+  TFLite: serving_default_input_47:0 -> ONNX: /up_blocks.1/attentions.1/proj_out/Conv_output_0
+Outputs:
+  TFLite: PartitionedCall:0 -> ONNX: /up_blocks.1/upsamplers.0/Resize_output_0
+
+Model: cpusubgraph32
+Inputs:
+  TFLite: serving_default_input_48:0 -> ONNX: /down_blocks.0/attentions.0/Add_output_0
+  TFLite: serving_default_input_49:0 -> ONNX: /up_blocks.1/upsamplers.0/conv/Conv_output_0
+Outputs:
+  TFLite: PartitionedCall:0 -> ONNX: /up_blocks.2/resnets.0/norm1/InstanceNormalization_output_0
+  TFLite: PartitionedCall:1 -> ONNX: /up_blocks.2/Concat_output_0
+
+Model: cpusubgraph33
+Inputs:
+  TFLite: serving_default_input_51:0 -> ONNX: /down_blocks.0/resnets.0/act_1/Mul_output_0
+  TFLite: serving_default_input_50:0 -> ONNX: /up_blocks.2/resnets.0/conv1/Conv_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.2/resnets.0/norm2/InstanceNormalization_output_0
+
+Model: cpusubgraph34
+Inputs:
+  TFLite: serving_default_input_52:0 -> ONNX: /up_blocks.2/attentions.0/norm/Reshape_output_0
+Outputs:
+  TFLite: PartitionedCall:0 -> ONNX: /up_blocks.2/attentions.0/norm/Reshape_1_output_0
+
+Model: cpusubgraph35
+Inputs:
+  TFLite: serving_default_input_53:0 -> ONNX: encoder_hidden_states
+  TFLite: serving_default_input_54:0 -> ONNX: /up_blocks.2/attentions.0/proj_in/Conv_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.2/attentions.0/Transpose_1_output_0
+
+Model: cpusubgraph36
+Inputs:
+  TFLite: serving_default_input_55:0 -> ONNX: /conv_in/Conv_output_0
+  TFLite: serving_default_input_57:0 -> ONNX: /up_blocks.2/resnets.0/Add_1_output_0
+  TFLite: serving_default_input_56:0 -> ONNX: /up_blocks.2/attentions.0/proj_out/Conv_output_0
+Outputs:
+  TFLite: PartitionedCall:0 -> ONNX: /up_blocks.2/resnets.1/norm1/InstanceNormalization_output_0
+  TFLite: PartitionedCall:1 -> ONNX: /up_blocks.2/Concat_1_output_0
+
+Model: cpusubgraph37
+Inputs:
+  TFLite: serving_default_input_59:0 -> ONNX: /down_blocks.0/resnets.0/act_1/Mul_output_0
+  TFLite: serving_default_input_58:0 -> ONNX: /up_blocks.2/resnets.1/conv1/Conv_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.2/resnets.1/norm2/InstanceNormalization_output_0
+
+Model: cpusubgraph38
+Inputs:
+  TFLite: serving_default_input_60:0 -> ONNX: /up_blocks.2/attentions.1/norm/Reshape_output_0
+Outputs:
+  TFLite: PartitionedCall:0 -> ONNX: /up_blocks.2/attentions.1/norm/Reshape_1_output_0
+
+Model: cpusubgraph39
+Inputs:
+  TFLite: serving_default_input_62:0 -> ONNX: /up_blocks.2/attentions.1/proj_in/Conv_output_0
+  TFLite: serving_default_input_61:0 -> ONNX: encoder_hidden_states
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.2/attentions.1/Transpose_1_output_0
+
+Model: cpusubgraph4
+Inputs:
+  TFLite: serving_default_input_64:0 -> ONNX: /down_blocks.0/resnets.0/Add_1_output_0
+  TFLite: serving_default_input_63:0 -> ONNX: /down_blocks.0/attentions.0/proj_out/Conv_output_0
+Outputs:
+  TFLite: PartitionedCall:0 -> ONNX: /down_blocks.0/attentions.0/Add_output_0
+
+Model: cpusubgraph40
+Inputs:
+  TFLite: serving_default_input_65:0 -> ONNX: /up_blocks.2/resnets.1/Add_1_output_0
+  TFLite: serving_default_input_66:0 -> ONNX: /up_blocks.2/attentions.1/proj_out/Conv_output_0
+Outputs:
+ TFLite: StatefulPartitionedCall:0 -> ONNX: 3089
+
+Model: cpusubgraph5
+Inputs:
+  TFLite: serving_default_input_67:0 -> ONNX: /down_blocks.1/resnets.0/norm1/Reshape_output_0
+Outputs:
+  TFLite: PartitionedCall:0 -> ONNX: /down_blocks.1/resnets.0/norm1/InstanceNormalization_output_0
+
+Model: cpusubgraph6
+Inputs:
+  TFLite: serving_default_input_69:0 -> ONNX: /down_blocks.0/resnets.0/act_1/Mul_output_0
+  TFLite: serving_default_input_68:0 -> ONNX: /down_blocks.1/resnets.0/conv1/Conv_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /down_blocks.1/resnets.0/norm2/InstanceNormalization_output_0
+
+Model: cpusubgraph7
+Inputs:
+  TFLite: serving_default_input_70:0 -> ONNX: /down_blocks.1/attentions.0/norm/Reshape_output_0
+Outputs:
+  TFLite: PartitionedCall:0 -> ONNX: /down_blocks.1/attentions.0/norm/Reshape_1_output_0
+
+Model: cpusubgraph8
+Inputs:
+  TFLite: serving_default_input_71:0 -> ONNX: encoder_hidden_states
+  TFLite: serving_default_input_72:0 -> ONNX: /down_blocks.1/attentions.0/proj_in/Conv_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /down_blocks.1/attentions.0/Transpose_1_output_0
+
+Model: cpusubgraph9
+Inputs:
+  TFLite: serving_default_input_74:0 -> ONNX: /down_blocks.1/resnets.0/Add_1_output_0
+  TFLite: serving_default_input_73:0 -> ONNX: /down_blocks.1/attentions.0/proj_out/Conv_output_0
+Outputs:
+  TFLite: PartitionedCall:0 -> ONNX: /down_blocks.1/attentions.0/Add_output_0
+
+Model: npusubgraph0
+Inputs:
+  TFLite: serving_default_input_75:0 -> ONNX: sample
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /conv_in/Conv_output_0
+  TFLite: StatefulPartitionedCall:1 -> ONNX: /down_blocks.0/resnets.0/norm1/Reshape_output_0
+
+Model: npusubgraph1
+Inputs:
+  TFLite: serving_default_input_76:0 -> ONNX: /down_blocks.0/resnets.0/norm1/InstanceNormalization_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /down_blocks.0/resnets.0/conv1/Conv_output_0
+
+Model: npusubgraph10
+Inputs:
+  TFLite: serving_default_input_77:0 -> ONNX: /down_blocks.1/attentions.0/Add_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /down_blocks.1/downsamplers.0/conv/Conv_output_0
+  TFLite: StatefulPartitionedCall:1 -> ONNX: /down_blocks.2/resnets.0/norm1/Reshape_output_0
+
+Model: npusubgraph11
+Inputs:
+  TFLite: serving_default_input_78:0 -> ONNX: /down_blocks.2/resnets.0/norm1/InstanceNormalization_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /down_blocks.2/resnets.0/conv1/Conv_output_0
+
+Model: npusubgraph12
+Inputs:
+  TFLite: serving_default_input_80:0 -> ONNX: /down_blocks.2/resnets.0/norm2/InstanceNormalization_output_0
+  TFLite: serving_default_input_79:0 -> ONNX: /down_blocks.1/downsamplers.0/conv/Conv_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:1 -> ONNX: /down_blocks.2/attentions.0/norm/Reshape_output_0
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /down_blocks.2/resnets.0/Add_1_output_0
+
+Model: npusubgraph13
+Inputs:
+  TFLite: serving_default_input_81:0 -> ONNX: /down_blocks.2/attentions.0/norm/Reshape_1_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /down_blocks.2/attentions.0/proj_in/Conv_output_0
+
+Model: npusubgraph14
+Inputs:
+  TFLite: serving_default_input_82:0 -> ONNX: /down_blocks.2/attentions.0/Transpose_1_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /down_blocks.2/attentions.0/proj_out/Conv_output_0
+
+Model: npusubgraph15
+Inputs:
+  TFLite: serving_default_input_83:0 -> ONNX: /up_blocks.0/resnets.0/norm1/InstanceNormalization_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.0/resnets.0/conv1/Conv_output_0
+
+Model: npusubgraph16
+Inputs:
+  TFLite: serving_default_input_84:0 -> ONNX: /up_blocks.0/Concat_output_0
+  TFLite: serving_default_input_85:0 -> ONNX: /up_blocks.0/resnets.0/norm2/InstanceNormalization_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.0/resnets.0/Add_1_output_0
+  TFLite: StatefulPartitionedCall:1 -> ONNX: /up_blocks.0/attentions.0/norm/Reshape_output_0
+
+Model: npusubgraph17
+Inputs:
+  TFLite: serving_default_input_86:0 -> ONNX: /up_blocks.0/attentions.0/norm/Reshape_1_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.0/attentions.0/proj_in/Conv_output_0
+
+Model: npusubgraph18
+Inputs:
+  TFLite: serving_default_input_87:0 -> ONNX: /up_blocks.0/attentions.0/Transpose_1_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.0/attentions.0/proj_out/Conv_output_0
+
+Model: npusubgraph19
+Inputs:
+  TFLite: serving_default_input_88:0 -> ONNX: /up_blocks.0/resnets.1/norm1/InstanceNormalization_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.0/resnets.1/conv1/Conv_output_0
+
+Model: npusubgraph2
+Inputs:
+  TFLite: serving_default_input_89:0 -> ONNX: /down_blocks.0/resnets.0/norm2/InstanceNormalization_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /down_blocks.0/resnets.0/conv2/Conv_output_0
+
+Model: npusubgraph20
+Inputs:
+  TFLite: serving_default_input_91:0 -> ONNX: /up_blocks.0/resnets.1/norm2/InstanceNormalization_output_0
+  TFLite: serving_default_input_90:0 -> ONNX: /up_blocks.0/Concat_1_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.0/resnets.1/Add_1_output_0
+  TFLite: StatefulPartitionedCall:1 -> ONNX: /up_blocks.0/attentions.1/norm/Reshape_output_0
+
+Model: npusubgraph21
+Inputs:
+  TFLite: serving_default_input_92:0 -> ONNX: /up_blocks.0/attentions.1/norm/Reshape_1_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.0/attentions.1/proj_in/Conv_output_0
+
+Model: npusubgraph22
+Inputs:
+  TFLite: serving_default_input_93:0 -> ONNX: /up_blocks.0/attentions.1/Transpose_1_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.0/attentions.1/proj_out/Conv_output_0
+
+Model: npusubgraph23
+Inputs:
+  TFLite: serving_default_input_94:0 -> ONNX: /up_blocks.0/upsamplers.0/Resize_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.0/upsamplers.0/conv/Conv_output_0
+
+Model: npusubgraph24
+Inputs:
+  TFLite: serving_default_input_95:0 -> ONNX: /up_blocks.1/resnets.0/norm1/InstanceNormalization_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.1/resnets.0/conv1/Conv_output_0
+
+Model: npusubgraph25
+Inputs:
+  TFLite: serving_default_input_96:0 -> ONNX: /up_blocks.1/Concat_output_0
+  TFLite: serving_default_input_97:0 -> ONNX: /up_blocks.1/resnets.0/norm2/InstanceNormalization_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.1/resnets.0/Add_1_output_0
+  TFLite: StatefulPartitionedCall:1 -> ONNX: /up_blocks.1/attentions.0/norm/Reshape_output_0
+  
+Model: npusubgraph26
+Inputs:
+  TFLite: serving_default_input_98:0 -> ONNX: /up_blocks.1/attentions.0/norm/Reshape_1_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.1/attentions.0/proj_in/Conv_output_0
+
+Model: npusubgraph27
+Inputs:
+  TFLite: serving_default_input_99:0 -> ONNX: /up_blocks.1/attentions.0/Transpose_1_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.1/attentions.0/proj_out/Conv_output_0
+
+Model: npusubgraph28
+Inputs:
+  TFLite: serving_default_input_100:0 -> ONNX: /up_blocks.1/resnets.1/norm1/InstanceNormalization_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.1/resnets.1/conv1/Conv_output_0
+
+Model: npusubgraph29
+Inputs:
+  TFLite: serving_default_input_102:0 -> ONNX: /up_blocks.1/resnets.1/norm2/InstanceNormalization_output_0
+  TFLite: serving_default_input_101:0 -> ONNX: /up_blocks.1/Concat_1_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:1 -> ONNX: /up_blocks.1/attentions.1/norm/Reshape_output_0
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.1/resnets.1/Add_1_output_0
+
+Model: npusubgraph3
+Inputs:
+  TFLite: serving_default_input_103:0 -> ONNX: /down_blocks.0/attentions.0/norm/Reshape_1_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /down_blocks.0/attentions.0/proj_in/Conv_output_0
+
+Model: npusubgraph30
+Inputs:
+  TFLite: serving_default_input_104:0 -> ONNX: /up_blocks.1/attentions.1/norm/Reshape_1_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.1/attentions.1/proj_in/Conv_output_0
+
+Model: npusubgraph31
+Inputs:
+  TFLite: serving_default_input_105:0 -> ONNX: /up_blocks.1/attentions.1/Transpose_1_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.1/attentions.1/proj_out/Conv_output_0
+
+Model: npusubgraph32
+Inputs:
+  TFLite: serving_default_input_106:0 -> ONNX: /up_blocks.1/upsamplers.0/Resize_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.1/upsamplers.0/conv/Conv_output_0
+
+Model: npusubgraph33
+Inputs:
+  TFLite: serving_default_input_107:0 -> ONNX: /up_blocks.2/resnets.0/norm1/InstanceNormalization_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.2/resnets.0/conv1/Conv_output_0
+
+Model: npusubgraph34
+Inputs:
+  TFLite: serving_default_input_108:0 -> ONNX: /up_blocks.2/Concat_output_0
+  TFLite: serving_default_input_109:0 -> ONNX: /up_blocks.2/resnets.0/norm2/InstanceNormalization_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.2/resnets.0/Add_1_output_0
+  TFLite: StatefulPartitionedCall:1 -> ONNX: /up_blocks.2/attentions.0/norm/Reshape_output_0
+
+Model: npusubgraph35
+Inputs:
+  TFLite: serving_default_input_110:0 -> ONNX: /up_blocks.2/attentions.0/norm/Reshape_1_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.2/attentions.0/proj_in/Conv_output_0
+
+Model: npusubgraph36
+Inputs:
+  TFLite: serving_default_input_111:0 -> ONNX: /up_blocks.2/attentions.0/Transpose_1_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.2/attentions.0/proj_out/Conv_output_0
+
+Model: npusubgraph37
+Inputs:
+  TFLite: serving_default_input_112:0 -> ONNX: /up_blocks.2/resnets.1/norm1/InstanceNormalization_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.2/resnets.1/conv1/Conv_output_0
+
+Model: npusubgraph38
+Inputs:
+  TFLite: serving_default_input_113:0 -> ONNX: /up_blocks.2/Concat_1_output_0
+  TFLite: serving_default_input_114:0 -> ONNX: /up_blocks.2/resnets.1/norm2/InstanceNormalization_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.2/resnets.1/Add_1_output_0
+  TFLite: StatefulPartitionedCall:1 -> ONNX: /up_blocks.2/attentions.1/norm/Reshape_output_0
+
+Model: npusubgraph39
+Inputs:
+  TFLite: serving_default_input_115:0 -> ONNX: /up_blocks.2/attentions.1/norm/Reshape_1_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.2/attentions.1/proj_in/Conv_output_0
+
+Model: npusubgraph4
+Inputs:
+  TFLite: serving_default_input_116:0 -> ONNX: /down_blocks.0/attentions.0/Transpose_1_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /down_blocks.0/attentions.0/proj_out/Conv_output_0
+
+Model: npusubgraph40
+Inputs:
+  TFLite: serving_default_input_117:0 -> ONNX: /up_blocks.2/attentions.1/Transpose_1_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /up_blocks.2/attentions.1/proj_out/Conv_output_0
+
+Model: npusubgraph5
+Inputs:
+  TFLite: serving_default_input_118:0 -> ONNX: /down_blocks.0/attentions.0/Add_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:1 -> ONNX: /down_blocks.1/resnets.0/norm1/Reshape_output_0
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /down_blocks.0/downsamplers.0/conv/Conv_output_0
+
+Model: npusubgraph6
+Inputs:
+  TFLite: serving_default_input_119:0 -> ONNX: /down_blocks.1/resnets.0/norm1/InstanceNormalization_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /down_blocks.1/resnets.0/conv1/Conv_output_0
+
+Model: npusubgraph7
+Inputs:
+  TFLite: serving_default_input_121:0 -> ONNX: /down_blocks.1/resnets.0/norm2/InstanceNormalization_output_0
+  TFLite: serving_default_input_120:0 -> ONNX: /down_blocks.0/downsamplers.0/conv/Conv_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /down_blocks.1/resnets.0/Add_1_output_0
+  TFLite: StatefulPartitionedCall:1 -> ONNX: /down_blocks.1/attentions.0/norm/Reshape_output_0
+
+Model: npusubgraph8
+Inputs:
+  TFLite: serving_default_input_122:0 -> ONNX: /down_blocks.1/attentions.0/norm/Reshape_1_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /down_blocks.1/attentions.0/proj_in/Conv_output_0
+
+Model: npusubgraph9
+Inputs:
+  TFLite: serving_default_input_123:0 -> ONNX: /down_blocks.1/attentions.0/Transpose_1_output_0
+Outputs:
+  TFLite: StatefulPartitionedCall:0 -> ONNX: /down_blocks.1/attentions.0/proj_out/Conv_output_0
+

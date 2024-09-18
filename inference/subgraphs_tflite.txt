@@ -1,0 +1,400 @@
+NPUsubgraph0: order1
+--input-name model_1/bk_tiny_lcmu_net_model/padded_conv2d/zero_padding2d/Pad; 1 34 34 4 
+--output-name model_1/bk_tiny_lcmu_net_model/padded_conv2d/conv2d/BiasAdd;model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/padded_conv2d_48/conv2d_48/Conv2D;model_1/bk_tiny_lcmu_net_model/padded_conv2d/conv2d/Conv2D;model_1/bk_tiny_lcmu_net_model/padded_conv2d/conv2d/BiasAdd/ReadVariableOp; 1 32 32 320 
+The predecessors of NPUsubgraph0: CPUsubgraph0; 
+The successors of NPUsubgraph0: CPUsubgraph1; CPUsubgraph3; CPUsubgraph35; 
+NPUsubgraph1: order3
+--input-name model_1/bk_tiny_lcmu_net_model/res_block/group_normalization/batchnorm/add_1; 1 32 32 32 10 model_1/bk_tiny_lcmu_net_model/res_block/group_normalization/Shape; 4 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block/padded_conv2d_1/conv2d_1/BiasAdd;model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/padded_conv2d_48/conv2d_48/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block/padded_conv2d_1/conv2d_1/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block/padded_conv2d_1/conv2d_1/BiasAdd/ReadVariableOp; 1 32 32 320 
+The predecessors of NPUsubgraph1: CPUsubgraph1; 
+The successors of NPUsubgraph1: CPUsubgraph2; 
+NPUsubgraph2: order5
+--input-name model_1/bk_tiny_lcmu_net_model/res_block/group_normalization_1/batchnorm/add_1; 1 32 32 32 10 model_1/bk_tiny_lcmu_net_model/res_block/group_normalization_1/Shape; 4 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block/padded_conv2d_2/conv2d_2/BiasAdd;model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/padded_conv2d_48/conv2d_48/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block/padded_conv2d_2/conv2d_2/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block/padded_conv2d_2/conv2d_2/BiasAdd/ReadVariableOp; 1 32 32 320 
+The predecessors of NPUsubgraph2: CPUsubgraph2; 
+The successors of NPUsubgraph2: CPUsubgraph3; 
+NPUsubgraph3: order7
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer/group_normalization_2/Reshape_3; 1 32 32 320 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer/Reshape; 1 1024 320 
+The predecessors of NPUsubgraph3: CPUsubgraph3; 
+The successors of NPUsubgraph3: CPUsubgraph4; 
+NPUsubgraph4: order9
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/add_2; 1 1024 320 model_1/bk_tiny_lcmu_net_model/res_block/add_1; 1 32 32 320 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer/add; 1 32 32 320 model_1/bk_tiny_lcmu_net_model/downsample/padded_conv2d_5/conv2d_5/BiasAdd;model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/padded_conv2d_48/conv2d_48/Conv2D;model_1/bk_tiny_lcmu_net_model/downsample/padded_conv2d_5/conv2d_5/Conv2D;model_1/bk_tiny_lcmu_net_model/downsample/padded_conv2d_5/conv2d_5/BiasAdd/ReadVariableOp; 1 16 16 320 
+The predecessors of NPUsubgraph4: CPUsubgraph4; CPUsubgraph3; 
+The successors of NPUsubgraph4: NPUsubgraph6; CPUsubgraph5; CPUsubgraph26; CPUsubgraph31; 
+NPUsubgraph5: order11
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_1/group_normalization_3/batchnorm/add_1; 1 16 16 32 10 model_1/bk_tiny_lcmu_net_model/res_block_1/group_normalization_3/Shape; 4 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block_1/padded_conv2d_6/conv2d_6/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample_1/padded_conv2d_38/conv2d_38/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_1/padded_conv2d_6/conv2d_6/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_1/padded_conv2d_6/conv2d_6/BiasAdd/ReadVariableOp; 1 16 16 640 
+The predecessors of NPUsubgraph5: CPUsubgraph5; 
+The successors of NPUsubgraph5: CPUsubgraph6; 
+NPUsubgraph6: order13
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_1/group_normalization_4/batchnorm/add_1; 1 16 16 32 20 model_1/bk_tiny_lcmu_net_model/res_block_1/group_normalization_4/Shape; 4 model_1/bk_tiny_lcmu_net_model/downsample/padded_conv2d_5/conv2d_5/BiasAdd;model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/padded_conv2d_48/conv2d_48/Conv2D;model_1/bk_tiny_lcmu_net_model/downsample/padded_conv2d_5/conv2d_5/Conv2D;model_1/bk_tiny_lcmu_net_model/downsample/padded_conv2d_5/conv2d_5/BiasAdd/ReadVariableOp; 1 16 16 320 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block_1/add_1; 1 16 16 640 
+The predecessors of NPUsubgraph6: CPUsubgraph6; NPUsubgraph4; 
+The successors of NPUsubgraph6: NPUsubgraph8; CPUsubgraph7; 
+NPUsubgraph7: order15
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_1/group_normalization_5/Reshape_3; 1 16 16 640 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_1/Reshape; 1 256 640 
+The predecessors of NPUsubgraph7: CPUsubgraph7; 
+The successors of NPUsubgraph7: CPUsubgraph8; 
+NPUsubgraph8: order17
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/add_2; 1 256 640 model_1/bk_tiny_lcmu_net_model/res_block_1/add_1; 1 16 16 640 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_1/add; 1 16 16 640 model_1/bk_tiny_lcmu_net_model/downsample_1/padded_conv2d_11/conv2d_11/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample_1/padded_conv2d_38/conv2d_38/Conv2D;model_1/bk_tiny_lcmu_net_model/downsample_1/padded_conv2d_11/conv2d_11/Conv2D;model_1/bk_tiny_lcmu_net_model/downsample_1/padded_conv2d_11/conv2d_11/BiasAdd/ReadVariableOp; 1 8 8 640 
+The predecessors of NPUsubgraph8: CPUsubgraph8; NPUsubgraph6; 
+The successors of NPUsubgraph8: NPUsubgraph10; CPUsubgraph9; CPUsubgraph17; CPUsubgraph22; 
+NPUsubgraph9: order19
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_2/group_normalization_6/batchnorm/add_1; 1 8 8 32 20 model_1/bk_tiny_lcmu_net_model/res_block_2/group_normalization_6/Shape; 4 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block_2/padded_conv2d_12/conv2d_12/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample/padded_conv2d_27/conv2d_27/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_2/padded_conv2d_12/conv2d_12/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_2/padded_conv2d_12/conv2d_12/BiasAdd/ReadVariableOp; 1 8 8 1280 
+The predecessors of NPUsubgraph9: CPUsubgraph9; 
+The successors of NPUsubgraph9: CPUsubgraph10; 
+NPUsubgraph10: order21
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_2/group_normalization_7/batchnorm/add_1; 1 8 8 32 40 model_1/bk_tiny_lcmu_net_model/res_block_2/group_normalization_7/Shape; 4 model_1/bk_tiny_lcmu_net_model/downsample_1/padded_conv2d_11/conv2d_11/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample_1/padded_conv2d_38/conv2d_38/Conv2D;model_1/bk_tiny_lcmu_net_model/downsample_1/padded_conv2d_11/conv2d_11/Conv2D;model_1/bk_tiny_lcmu_net_model/downsample_1/padded_conv2d_11/conv2d_11/BiasAdd/ReadVariableOp; 1 8 8 640 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block_2/add_1; 1 8 8 1280 
+The predecessors of NPUsubgraph10: CPUsubgraph10; NPUsubgraph8; 
+The successors of NPUsubgraph10: CPUsubgraph11; CPUsubgraph13; 
+NPUsubgraph11: order23
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_2/group_normalization_8/Reshape_3; 1 8 8 1280 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_2/Reshape; 1 64 1280 
+The predecessors of NPUsubgraph11: CPUsubgraph11; 
+The successors of NPUsubgraph11: CPUsubgraph12; 
+NPUsubgraph12: order25
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_2/Reshape_1; 1 8 8 1280 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_2/padded_conv2d_16/conv2d_16/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample/padded_conv2d_27/conv2d_27/Conv2D;model_1/bk_tiny_lcmu_net_model/spatial_transformer_2/padded_conv2d_16/conv2d_16/Conv2D;model_1/bk_tiny_lcmu_net_model/spatial_transformer_2/padded_conv2d_16/conv2d_16/BiasAdd/ReadVariableOp; 1 8 8 1280 
+The predecessors of NPUsubgraph12: CPUsubgraph12; 
+The successors of NPUsubgraph12: CPUsubgraph13; 
+NPUsubgraph13: order27
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_3/group_normalization_9/batchnorm/add_1; 1 8 8 32 80 model_1/bk_tiny_lcmu_net_model/res_block_3/group_normalization_9/Shape; 4 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block_3/padded_conv2d_17/conv2d_17/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample/padded_conv2d_27/conv2d_27/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_3/padded_conv2d_17/conv2d_17/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_3/padded_conv2d_17/conv2d_17/BiasAdd/ReadVariableOp; 1 8 8 1280 
+The predecessors of NPUsubgraph13: CPUsubgraph13; 
+The successors of NPUsubgraph13: CPUsubgraph14; 
+NPUsubgraph14: order29
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_3/group_normalization_10/batchnorm/add_1; 1 8 8 32 40 model_1/bk_tiny_lcmu_net_model/res_block_3/group_normalization_10/Shape; 4 model_1/bk_tiny_lcmu_net_model/concat; 1 8 8 2560 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block_3/add_1; 1 8 8 1280 
+The predecessors of NPUsubgraph14: CPUsubgraph14; CPUsubgraph13; 
+The successors of NPUsubgraph14: CPUsubgraph15; CPUsubgraph17; 
+NPUsubgraph15: order31
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_3/group_normalization_11/Reshape_3; 1 8 8 1280 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_3/Reshape; 1 64 1280 
+The predecessors of NPUsubgraph15: CPUsubgraph15; 
+The successors of NPUsubgraph15: CPUsubgraph16; 
+NPUsubgraph16: order33
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_3/Reshape_1; 1 8 8 1280 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_3/padded_conv2d_21/conv2d_21/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample/padded_conv2d_27/conv2d_27/Conv2D;model_1/bk_tiny_lcmu_net_model/spatial_transformer_3/padded_conv2d_21/conv2d_21/Conv2D;model_1/bk_tiny_lcmu_net_model/spatial_transformer_3/padded_conv2d_21/conv2d_21/BiasAdd/ReadVariableOp; 1 8 8 1280 
+The predecessors of NPUsubgraph16: CPUsubgraph16; 
+The successors of NPUsubgraph16: CPUsubgraph17; 
+NPUsubgraph17: order35
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_4/group_normalization_12/batchnorm/add_1; 1 8 8 32 60 model_1/bk_tiny_lcmu_net_model/res_block_4/group_normalization_12/Shape; 4 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block_4/padded_conv2d_22/conv2d_22/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample/padded_conv2d_27/conv2d_27/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_4/padded_conv2d_22/conv2d_22/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_4/padded_conv2d_22/conv2d_22/BiasAdd/ReadVariableOp; 1 8 8 1280 
+The predecessors of NPUsubgraph17: CPUsubgraph17; 
+The successors of NPUsubgraph17: CPUsubgraph18; 
+NPUsubgraph18: order37
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_4/group_normalization_13/batchnorm/add_1; 1 8 8 32 40 model_1/bk_tiny_lcmu_net_model/res_block_4/group_normalization_13/Shape; 4 model_1/bk_tiny_lcmu_net_model/concat_1; 1 8 8 1920 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block_4/add_1; 1 8 8 1280 
+The predecessors of NPUsubgraph18: CPUsubgraph18; CPUsubgraph17; 
+The successors of NPUsubgraph18: CPUsubgraph19; CPUsubgraph21; 
+NPUsubgraph19: order39
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_4/group_normalization_14/Reshape_3; 1 8 8 1280 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_4/Reshape; 1 64 1280 
+The predecessors of NPUsubgraph19: CPUsubgraph19; 
+The successors of NPUsubgraph19: CPUsubgraph20; 
+NPUsubgraph20: order41
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_4/Reshape_1; 1 8 8 1280 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_4/padded_conv2d_26/conv2d_26/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample/padded_conv2d_27/conv2d_27/Conv2D;model_1/bk_tiny_lcmu_net_model/spatial_transformer_4/padded_conv2d_26/conv2d_26/Conv2D;model_1/bk_tiny_lcmu_net_model/spatial_transformer_4/padded_conv2d_26/conv2d_26/BiasAdd/ReadVariableOp; 1 8 8 1280 
+The predecessors of NPUsubgraph20: CPUsubgraph20; 
+The successors of NPUsubgraph20: CPUsubgraph21; 
+NPUsubgraph21: order43
+--input-name model_1/bk_tiny_lcmu_net_model/upsample/up_sampling2d/resize/ResizeNearestNeighbor; 1 16 16 1280 
+--output-name model_1/bk_tiny_lcmu_net_model/upsample/padded_conv2d_27/conv2d_27/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample/padded_conv2d_27/conv2d_27/Conv2D;model_1/bk_tiny_lcmu_net_model/upsample/padded_conv2d_27/conv2d_27/BiasAdd/ReadVariableOp; 1 16 16 1280 
+The predecessors of NPUsubgraph21: CPUsubgraph21; 
+The successors of NPUsubgraph21: CPUsubgraph22; 
+NPUsubgraph22: order45
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_5/group_normalization_15/batchnorm/add_1; 1 16 16 32 60 model_1/bk_tiny_lcmu_net_model/res_block_5/group_normalization_15/Shape; 4 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block_5/padded_conv2d_28/conv2d_28/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample_1/padded_conv2d_38/conv2d_38/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_5/padded_conv2d_28/conv2d_28/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_5/padded_conv2d_28/conv2d_28/BiasAdd/ReadVariableOp; 1 16 16 640 
+The predecessors of NPUsubgraph22: CPUsubgraph22; 
+The successors of NPUsubgraph22: CPUsubgraph23; 
+NPUsubgraph23: order47
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_5/group_normalization_16/batchnorm/add_1; 1 16 16 32 20 model_1/bk_tiny_lcmu_net_model/res_block_5/group_normalization_16/Shape; 4 model_1/bk_tiny_lcmu_net_model/concat_2; 1 16 16 1920 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block_5/add_1; 1 16 16 640 
+The predecessors of NPUsubgraph23: CPUsubgraph23; CPUsubgraph22; 
+The successors of NPUsubgraph23: CPUsubgraph24; CPUsubgraph26; 
+NPUsubgraph24: order49
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_5/group_normalization_17/Reshape_3; 1 16 16 640 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_5/Reshape; 1 256 640 
+The predecessors of NPUsubgraph24: CPUsubgraph24; 
+The successors of NPUsubgraph24: CPUsubgraph25; 
+NPUsubgraph25: order51
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_5/Reshape_1; 1 16 16 640 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_5/padded_conv2d_32/conv2d_32/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample_1/padded_conv2d_38/conv2d_38/Conv2D;model_1/bk_tiny_lcmu_net_model/spatial_transformer_5/padded_conv2d_32/conv2d_32/Conv2D;model_1/bk_tiny_lcmu_net_model/spatial_transformer_5/padded_conv2d_32/conv2d_32/BiasAdd/ReadVariableOp; 1 16 16 640 
+The predecessors of NPUsubgraph25: CPUsubgraph25; 
+The successors of NPUsubgraph25: CPUsubgraph26; 
+NPUsubgraph26: order53
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_6/group_normalization_18/batchnorm/add_1; 1 16 16 32 30 model_1/bk_tiny_lcmu_net_model/res_block_6/group_normalization_18/Shape; 4 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block_6/padded_conv2d_33/conv2d_33/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample_1/padded_conv2d_38/conv2d_38/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_6/padded_conv2d_33/conv2d_33/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_6/padded_conv2d_33/conv2d_33/BiasAdd/ReadVariableOp; 1 16 16 640 
+The predecessors of NPUsubgraph26: CPUsubgraph26; 
+The successors of NPUsubgraph26: CPUsubgraph27; 
+NPUsubgraph27: order55
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_6/group_normalization_19/batchnorm/add_1; 1 16 16 32 20 model_1/bk_tiny_lcmu_net_model/res_block_6/group_normalization_19/Shape; 4 model_1/bk_tiny_lcmu_net_model/concat_3; 1 16 16 960 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block_6/add_1; 1 16 16 640 
+The predecessors of NPUsubgraph27: CPUsubgraph27; CPUsubgraph26; 
+The successors of NPUsubgraph27: CPUsubgraph28; CPUsubgraph30; 
+NPUsubgraph28: order57
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_6/group_normalization_20/Reshape_3; 1 16 16 640 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_6/Reshape; 1 256 640 
+The predecessors of NPUsubgraph28: CPUsubgraph28; 
+The successors of NPUsubgraph28: CPUsubgraph29; 
+NPUsubgraph29: order59
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_6/Reshape_1; 1 16 16 640 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_6/padded_conv2d_37/conv2d_37/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample_1/padded_conv2d_38/conv2d_38/Conv2D;model_1/bk_tiny_lcmu_net_model/spatial_transformer_6/padded_conv2d_37/conv2d_37/Conv2D;model_1/bk_tiny_lcmu_net_model/spatial_transformer_6/padded_conv2d_37/conv2d_37/BiasAdd/ReadVariableOp; 1 16 16 640 
+The predecessors of NPUsubgraph29: CPUsubgraph29; 
+The successors of NPUsubgraph29: CPUsubgraph30; 
+NPUsubgraph30: order61
+--input-name model_1/bk_tiny_lcmu_net_model/upsample_1/up_sampling2d_1/resize/ResizeNearestNeighbor; 1 32 32 640 
+--output-name model_1/bk_tiny_lcmu_net_model/upsample_1/padded_conv2d_38/conv2d_38/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample_1/padded_conv2d_38/conv2d_38/Conv2D;model_1/bk_tiny_lcmu_net_model/upsample_1/padded_conv2d_38/conv2d_38/BiasAdd/ReadVariableOp; 1 32 32 640 
+The predecessors of NPUsubgraph30: CPUsubgraph30; 
+The successors of NPUsubgraph30: CPUsubgraph31; 
+NPUsubgraph31: order63
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_7/group_normalization_21/batchnorm/add_1; 1 32 32 32 30 model_1/bk_tiny_lcmu_net_model/res_block_7/group_normalization_21/Shape; 4 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block_7/padded_conv2d_39/conv2d_39/BiasAdd;model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/padded_conv2d_48/conv2d_48/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_7/padded_conv2d_39/conv2d_39/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_7/padded_conv2d_39/conv2d_39/BiasAdd/ReadVariableOp; 1 32 32 320 
+The predecessors of NPUsubgraph31: CPUsubgraph31; 
+The successors of NPUsubgraph31: CPUsubgraph32; 
+NPUsubgraph32: order65
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_7/group_normalization_22/batchnorm/add_1; 1 32 32 32 10 model_1/bk_tiny_lcmu_net_model/res_block_7/group_normalization_22/Shape; 4 model_1/bk_tiny_lcmu_net_model/concat_4; 1 32 32 960 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block_7/add_1; 1 32 32 320 
+The predecessors of NPUsubgraph32: CPUsubgraph32; CPUsubgraph31; 
+The successors of NPUsubgraph32: CPUsubgraph33; CPUsubgraph35; 
+NPUsubgraph33: order67
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_7/group_normalization_23/Reshape_3; 1 32 32 320 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_7/Reshape; 1 1024 320 
+The predecessors of NPUsubgraph33: CPUsubgraph33; 
+The successors of NPUsubgraph33: CPUsubgraph34; 
+NPUsubgraph34: order69
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_7/Reshape_1; 1 32 32 320 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_7/padded_conv2d_43/conv2d_43/BiasAdd;model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/padded_conv2d_48/conv2d_48/Conv2D;model_1/bk_tiny_lcmu_net_model/spatial_transformer_7/padded_conv2d_43/conv2d_43/Conv2D;model_1/bk_tiny_lcmu_net_model/spatial_transformer_7/padded_conv2d_43/conv2d_43/BiasAdd/ReadVariableOp; 1 32 32 320 
+The predecessors of NPUsubgraph34: CPUsubgraph34; 
+The successors of NPUsubgraph34: CPUsubgraph35; 
+NPUsubgraph35: order71
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_8/group_normalization_24/batchnorm/add_1; 1 32 32 32 20 model_1/bk_tiny_lcmu_net_model/res_block_8/group_normalization_24/Shape; 4 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block_8/padded_conv2d_44/conv2d_44/BiasAdd;model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/padded_conv2d_48/conv2d_48/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_8/padded_conv2d_44/conv2d_44/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_8/padded_conv2d_44/conv2d_44/BiasAdd/ReadVariableOp; 1 32 32 320 
+The predecessors of NPUsubgraph35: CPUsubgraph35; 
+The successors of NPUsubgraph35: CPUsubgraph36; 
+NPUsubgraph36: order73
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_8/group_normalization_25/batchnorm/add_1; 1 32 32 32 10 model_1/bk_tiny_lcmu_net_model/res_block_8/group_normalization_25/Shape; 4 model_1/bk_tiny_lcmu_net_model/concat_5; 1 32 32 640 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block_8/add_1; 1 32 32 320 
+The predecessors of NPUsubgraph36: CPUsubgraph36; CPUsubgraph35; 
+The successors of NPUsubgraph36: CPUsubgraph37; CPUsubgraph39; 
+NPUsubgraph37: order75
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/group_normalization_26/Reshape_3; 1 32 32 320 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/Reshape; 1 1024 320 
+The predecessors of NPUsubgraph37: CPUsubgraph37; 
+The successors of NPUsubgraph37: CPUsubgraph38; 
+NPUsubgraph38: order77
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/Reshape_1; 1 32 32 320 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/padded_conv2d_48/conv2d_48/BiasAdd;model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/padded_conv2d_48/conv2d_48/Conv2D;model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/padded_conv2d_48/conv2d_48/BiasAdd/ReadVariableOp; 1 32 32 320 
+The predecessors of NPUsubgraph38: CPUsubgraph38; 
+The successors of NPUsubgraph38: CPUsubgraph39; 
+NPUsubgraph39: order79
+--input-name model_1/bk_tiny_lcmu_net_model/group_normalization_27/batchnorm/add_1; 1 32 32 32 10 model_1/bk_tiny_lcmu_net_model/group_normalization_27/Shape; 4 
+--output-name StatefulPartitionedCall:0; 1 32 32 4 
+The predecessors of NPUsubgraph39: CPUsubgraph39; 
+The successors of NPUsubgraph39: 
+CPUsubgraph0: order0
+--input-name serving_default_input_3:0; 1 77 768 serving_default_input_6:0; 1 32 32 4 serving_default_input_5:0; 1 256 serving_default_input_4:0; 1 320 
+--output-name model_1/bk_tiny_lcmu_net_model/padded_conv2d/zero_padding2d/Pad; 1 34 34 4 model_1/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/dense_10/Tensordot/Reshape; 1 1 model_1/bk_tiny_lcmu_net_model/res_block/mul_3; 1 1280 
+The predecessors of CPUsubgraph0: 
+The successors of CPUsubgraph0: NPUsubgraph0; CPUsubgraph1; CPUsubgraph3; 
+CPUsubgraph1: order2
+--input-name model_1/bk_tiny_lcmu_net_model/padded_conv2d/conv2d/BiasAdd;model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/padded_conv2d_48/conv2d_48/Conv2D;model_1/bk_tiny_lcmu_net_model/padded_conv2d/conv2d/Conv2D;model_1/bk_tiny_lcmu_net_model/padded_conv2d/conv2d/BiasAdd/ReadVariableOp; 1 32 32 320 model_1/bk_tiny_lcmu_net_model/res_block/mul_3; 1 1280 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block/group_normalization/Shape; 4 model_1/bk_tiny_lcmu_net_model/res_block_1/strided_slice1; 1 1 1 640 model_1/bk_tiny_lcmu_net_model/res_block_2/strided_slice1; 1 1 1 1280 model_1/bk_tiny_lcmu_net_model/res_block_3/strided_slice1; 1 1 1 1280 model_1/bk_tiny_lcmu_net_model/res_block_4/strided_slice3; 1 1 1 1280 model_1/bk_tiny_lcmu_net_model/res_block_5/strided_slice1; 1 1 1 640 model_1/bk_tiny_lcmu_net_model/res_block_6/strided_slice3; 1 1 1 640 model_1/bk_tiny_lcmu_net_model/res_block_7/strided_slice1; 1 1 1 320 model_1/bk_tiny_lcmu_net_model/res_block_8/strided_slice1; 1 1 1 320 model_1/bk_tiny_lcmu_net_model/res_block/strided_slice5; 1 1 1 320 model_1/bk_tiny_lcmu_net_model/res_block/group_normalization/batchnorm/add_1; 1 32 32 32 10 
+The predecessors of CPUsubgraph1: NPUsubgraph0; CPUsubgraph0; 
+The successors of CPUsubgraph1: NPUsubgraph1; CPUsubgraph2; CPUsubgraph6; CPUsubgraph10; CPUsubgraph14; CPUsubgraph18; CPUsubgraph23; CPUsubgraph27; CPUsubgraph32; CPUsubgraph36; 
+CPUsubgraph2: order4
+--input-name model_1/bk_tiny_lcmu_net_model/res_block/padded_conv2d_1/conv2d_1/BiasAdd;model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/padded_conv2d_48/conv2d_48/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block/padded_conv2d_1/conv2d_1/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block/padded_conv2d_1/conv2d_1/BiasAdd/ReadVariableOp; 1 32 32 320 model_1/bk_tiny_lcmu_net_model/res_block/strided_slice5; 1 1 1 320 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block/group_normalization_1/Shape; 4 model_1/bk_tiny_lcmu_net_model/res_block/group_normalization_1/batchnorm/add_1; 1 32 32 32 10 
+The predecessors of CPUsubgraph2: NPUsubgraph1; CPUsubgraph1; 
+The successors of CPUsubgraph2: NPUsubgraph2; 
+CPUsubgraph3: order6
+--input-name model_1/bk_tiny_lcmu_net_model/padded_conv2d/conv2d/BiasAdd;model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/padded_conv2d_48/conv2d_48/Conv2D;model_1/bk_tiny_lcmu_net_model/padded_conv2d/conv2d/Conv2D;model_1/bk_tiny_lcmu_net_model/padded_conv2d/conv2d/BiasAdd/ReadVariableOp; 1 32 32 320 model_1/bk_tiny_lcmu_net_model/res_block/padded_conv2d_2/conv2d_2/BiasAdd;model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/padded_conv2d_48/conv2d_48/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block/padded_conv2d_2/conv2d_2/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block/padded_conv2d_2/conv2d_2/BiasAdd/ReadVariableOp; 1 32 32 320 model_1/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/dense_10/Tensordot/Reshape; 1 1 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block/add_1; 1 32 32 320 model_1/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_3/Reshape_4; 1 80 77 model_1/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_3/Reshape_7; 1 77 80 model_1/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_5/Reshape_4; 1 160 77 model_1/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_5/Reshape_7; 1 77 160 model_1/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_7/Reshape_4; 1 160 77 model_1/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_7/Reshape_7; 1 77 160 model_1/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_9/Reshape_4; 1 160 77 model_1/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_9/Reshape_7; 1 77 160 model_1/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_11/Reshape_4; 1 80 77 model_1/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_11/Reshape_7; 1 77 80 model_1/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_13/Reshape_4; 1 80 77 model_1/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_13/Reshape_7; 1 77 80 model_1/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_15/Reshape_4; 1 40 77 model_1/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_15/Reshape_7; 1 77 40 model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_17/Reshape_4; 1 40 77 model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_17/Reshape_7; 1 77 40 model_1/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/Reshape_7; 1 77 40 model_1/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/Reshape_4; 1 40 77 model_1/bk_tiny_lcmu_net_model/spatial_transformer/group_normalization_2/Reshape_3; 1 32 32 320 
+The predecessors of CPUsubgraph3: NPUsubgraph0; NPUsubgraph2; CPUsubgraph0; 
+The successors of CPUsubgraph3: NPUsubgraph3; NPUsubgraph4; CPUsubgraph4; CPUsubgraph8; CPUsubgraph12; CPUsubgraph16; CPUsubgraph20; CPUsubgraph25; CPUsubgraph29; CPUsubgraph34; CPUsubgraph38; 
+CPUsubgraph4: order8
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer/Reshape; 1 1024 320 model_1/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/Reshape_4; 1 40 77 model_1/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/cross_attention_1/Reshape_7; 1 77 40 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer/basic_transformer_block/add_2; 1 1024 320 
+The predecessors of CPUsubgraph4: NPUsubgraph3; CPUsubgraph3; 
+The successors of CPUsubgraph4: NPUsubgraph4; 
+CPUsubgraph5: order10
+--input-name model_1/bk_tiny_lcmu_net_model/downsample/padded_conv2d_5/conv2d_5/BiasAdd;model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/padded_conv2d_48/conv2d_48/Conv2D;model_1/bk_tiny_lcmu_net_model/downsample/padded_conv2d_5/conv2d_5/Conv2D;model_1/bk_tiny_lcmu_net_model/downsample/padded_conv2d_5/conv2d_5/BiasAdd/ReadVariableOp; 1 16 16 320 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block_1/group_normalization_3/Shape; 4 model_1/bk_tiny_lcmu_net_model/res_block_1/group_normalization_3/batchnorm/add_1; 1 16 16 32 10 
+The predecessors of CPUsubgraph5: NPUsubgraph4; 
+The successors of CPUsubgraph5: NPUsubgraph5; 
+CPUsubgraph6: order12
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_1/padded_conv2d_6/conv2d_6/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample_1/padded_conv2d_38/conv2d_38/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_1/padded_conv2d_6/conv2d_6/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_1/padded_conv2d_6/conv2d_6/BiasAdd/ReadVariableOp; 1 16 16 640 model_1/bk_tiny_lcmu_net_model/res_block_1/strided_slice1; 1 1 1 640 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block_1/group_normalization_4/Shape; 4 model_1/bk_tiny_lcmu_net_model/res_block_1/group_normalization_4/batchnorm/add_1; 1 16 16 32 20 
+The predecessors of CPUsubgraph6: NPUsubgraph5; CPUsubgraph1; 
+The successors of CPUsubgraph6: NPUsubgraph6; 
+CPUsubgraph7: order14
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_1/add_1; 1 16 16 640 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_1/group_normalization_5/Reshape_3; 1 16 16 640 
+The predecessors of CPUsubgraph7: NPUsubgraph6; 
+The successors of CPUsubgraph7: NPUsubgraph7; 
+CPUsubgraph8: order16
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_1/Reshape; 1 256 640 model_1/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_3/Reshape_4; 1 80 77 model_1/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/cross_attention_3/Reshape_7; 1 77 80 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_1/basic_transformer_block_1/add_2; 1 256 640 
+The predecessors of CPUsubgraph8: NPUsubgraph7; CPUsubgraph3; 
+The successors of CPUsubgraph8: NPUsubgraph8; 
+CPUsubgraph9: order18
+--input-name model_1/bk_tiny_lcmu_net_model/downsample_1/padded_conv2d_11/conv2d_11/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample_1/padded_conv2d_38/conv2d_38/Conv2D;model_1/bk_tiny_lcmu_net_model/downsample_1/padded_conv2d_11/conv2d_11/Conv2D;model_1/bk_tiny_lcmu_net_model/downsample_1/padded_conv2d_11/conv2d_11/BiasAdd/ReadVariableOp; 1 8 8 640 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block_2/group_normalization_6/Shape; 4 model_1/bk_tiny_lcmu_net_model/res_block_2/group_normalization_6/batchnorm/add_1; 1 8 8 32 20 
+The predecessors of CPUsubgraph9: NPUsubgraph8; 
+The successors of CPUsubgraph9: NPUsubgraph9; 
+CPUsubgraph10: order20
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_2/padded_conv2d_12/conv2d_12/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample/padded_conv2d_27/conv2d_27/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_2/padded_conv2d_12/conv2d_12/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_2/padded_conv2d_12/conv2d_12/BiasAdd/ReadVariableOp; 1 8 8 1280 model_1/bk_tiny_lcmu_net_model/res_block_2/strided_slice1; 1 1 1 1280 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block_2/group_normalization_7/Shape; 4 model_1/bk_tiny_lcmu_net_model/res_block_2/group_normalization_7/batchnorm/add_1; 1 8 8 32 40 
+The predecessors of CPUsubgraph10: NPUsubgraph9; CPUsubgraph1; 
+The successors of CPUsubgraph10: NPUsubgraph10; 
+CPUsubgraph11: order22
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_2/add_1; 1 8 8 1280 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_2/group_normalization_8/Reshape_3; 1 8 8 1280 
+The predecessors of CPUsubgraph11: NPUsubgraph10; 
+The successors of CPUsubgraph11: NPUsubgraph11; 
+CPUsubgraph12: order24
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_2/Reshape; 1 64 1280 model_1/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_5/Reshape_4; 1 160 77 model_1/bk_tiny_lcmu_net_model/spatial_transformer_2/basic_transformer_block_2/cross_attention_5/Reshape_7; 1 77 160 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_2/Reshape_1; 1 8 8 1280 
+The predecessors of CPUsubgraph12: NPUsubgraph11; CPUsubgraph3; 
+The successors of CPUsubgraph12: NPUsubgraph12; 
+CPUsubgraph13: order26
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_2/padded_conv2d_16/conv2d_16/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample/padded_conv2d_27/conv2d_27/Conv2D;model_1/bk_tiny_lcmu_net_model/spatial_transformer_2/padded_conv2d_16/conv2d_16/Conv2D;model_1/bk_tiny_lcmu_net_model/spatial_transformer_2/padded_conv2d_16/conv2d_16/BiasAdd/ReadVariableOp; 1 8 8 1280 model_1/bk_tiny_lcmu_net_model/res_block_2/add_1; 1 8 8 1280 
+--output-name model_1/bk_tiny_lcmu_net_model/concat; 1 8 8 2560 model_1/bk_tiny_lcmu_net_model/res_block_3/group_normalization_9/Shape; 4 model_1/bk_tiny_lcmu_net_model/res_block_3/group_normalization_9/batchnorm/add_1; 1 8 8 32 80 
+The predecessors of CPUsubgraph13: NPUsubgraph12; NPUsubgraph10; 
+The successors of CPUsubgraph13: NPUsubgraph13; NPUsubgraph14; 
+CPUsubgraph14: order28
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_3/padded_conv2d_17/conv2d_17/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample/padded_conv2d_27/conv2d_27/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_3/padded_conv2d_17/conv2d_17/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_3/padded_conv2d_17/conv2d_17/BiasAdd/ReadVariableOp; 1 8 8 1280 model_1/bk_tiny_lcmu_net_model/res_block_3/strided_slice1; 1 1 1 1280 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block_3/group_normalization_10/Shape; 4 model_1/bk_tiny_lcmu_net_model/res_block_3/group_normalization_10/batchnorm/add_1; 1 8 8 32 40 
+The predecessors of CPUsubgraph14: NPUsubgraph13; CPUsubgraph1; 
+The successors of CPUsubgraph14: NPUsubgraph14; 
+CPUsubgraph15: order30
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_3/add_1; 1 8 8 1280 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_3/group_normalization_11/Reshape_3; 1 8 8 1280 
+The predecessors of CPUsubgraph15: NPUsubgraph14; 
+The successors of CPUsubgraph15: NPUsubgraph15; 
+CPUsubgraph16: order32
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_3/Reshape; 1 64 1280 model_1/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_7/Reshape_4; 1 160 77 model_1/bk_tiny_lcmu_net_model/spatial_transformer_3/basic_transformer_block_3/cross_attention_7/Reshape_7; 1 77 160 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_3/Reshape_1; 1 8 8 1280 
+The predecessors of CPUsubgraph16: NPUsubgraph15; CPUsubgraph3; 
+The successors of CPUsubgraph16: NPUsubgraph16; 
+CPUsubgraph17: order34
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_3/padded_conv2d_21/conv2d_21/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample/padded_conv2d_27/conv2d_27/Conv2D;model_1/bk_tiny_lcmu_net_model/spatial_transformer_3/padded_conv2d_21/conv2d_21/Conv2D;model_1/bk_tiny_lcmu_net_model/spatial_transformer_3/padded_conv2d_21/conv2d_21/BiasAdd/ReadVariableOp; 1 8 8 1280 model_1/bk_tiny_lcmu_net_model/res_block_3/add_1; 1 8 8 1280 model_1/bk_tiny_lcmu_net_model/downsample_1/padded_conv2d_11/conv2d_11/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample_1/padded_conv2d_38/conv2d_38/Conv2D;model_1/bk_tiny_lcmu_net_model/downsample_1/padded_conv2d_11/conv2d_11/Conv2D;model_1/bk_tiny_lcmu_net_model/downsample_1/padded_conv2d_11/conv2d_11/BiasAdd/ReadVariableOp; 1 8 8 640 
+--output-name model_1/bk_tiny_lcmu_net_model/concat_1; 1 8 8 1920 model_1/bk_tiny_lcmu_net_model/res_block_4/group_normalization_12/Shape; 4 model_1/bk_tiny_lcmu_net_model/res_block_4/group_normalization_12/batchnorm/add_1; 1 8 8 32 60 
+The predecessors of CPUsubgraph17: NPUsubgraph16; NPUsubgraph14; NPUsubgraph8; 
+The successors of CPUsubgraph17: NPUsubgraph17; NPUsubgraph18; 
+CPUsubgraph18: order36
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_4/padded_conv2d_22/conv2d_22/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample/padded_conv2d_27/conv2d_27/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_4/padded_conv2d_22/conv2d_22/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_4/padded_conv2d_22/conv2d_22/BiasAdd/ReadVariableOp; 1 8 8 1280 model_1/bk_tiny_lcmu_net_model/res_block_4/strided_slice3; 1 1 1 1280 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block_4/group_normalization_13/Shape; 4 model_1/bk_tiny_lcmu_net_model/res_block_4/group_normalization_13/batchnorm/add_1; 1 8 8 32 40 
+The predecessors of CPUsubgraph18: NPUsubgraph17; CPUsubgraph1; 
+The successors of CPUsubgraph18: NPUsubgraph18; 
+CPUsubgraph19: order38
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_4/add_1; 1 8 8 1280 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_4/group_normalization_14/Reshape_3; 1 8 8 1280 
+The predecessors of CPUsubgraph19: NPUsubgraph18; 
+The successors of CPUsubgraph19: NPUsubgraph19; 
+CPUsubgraph20: order40
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_4/Reshape; 1 64 1280 model_1/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_9/Reshape_4; 1 160 77 model_1/bk_tiny_lcmu_net_model/spatial_transformer_4/basic_transformer_block_4/cross_attention_9/Reshape_7; 1 77 160 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_4/Reshape_1; 1 8 8 1280 
+The predecessors of CPUsubgraph20: NPUsubgraph19; CPUsubgraph3; 
+The successors of CPUsubgraph20: NPUsubgraph20; 
+CPUsubgraph21: order42
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_4/padded_conv2d_26/conv2d_26/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample/padded_conv2d_27/conv2d_27/Conv2D;model_1/bk_tiny_lcmu_net_model/spatial_transformer_4/padded_conv2d_26/conv2d_26/Conv2D;model_1/bk_tiny_lcmu_net_model/spatial_transformer_4/padded_conv2d_26/conv2d_26/BiasAdd/ReadVariableOp; 1 8 8 1280 model_1/bk_tiny_lcmu_net_model/res_block_4/add_1; 1 8 8 1280 
+--output-name model_1/bk_tiny_lcmu_net_model/upsample/up_sampling2d/resize/ResizeNearestNeighbor; 1 16 16 1280 
+The predecessors of CPUsubgraph21: NPUsubgraph20; NPUsubgraph18; 
+The successors of CPUsubgraph21: NPUsubgraph21; 
+CPUsubgraph22: order44
+--input-name model_1/bk_tiny_lcmu_net_model/upsample/padded_conv2d_27/conv2d_27/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample/padded_conv2d_27/conv2d_27/Conv2D;model_1/bk_tiny_lcmu_net_model/upsample/padded_conv2d_27/conv2d_27/BiasAdd/ReadVariableOp; 1 16 16 1280 model_1/bk_tiny_lcmu_net_model/spatial_transformer_1/add; 1 16 16 640 
+--output-name model_1/bk_tiny_lcmu_net_model/concat_2; 1 16 16 1920 model_1/bk_tiny_lcmu_net_model/res_block_5/group_normalization_15/Shape; 4 model_1/bk_tiny_lcmu_net_model/res_block_5/group_normalization_15/batchnorm/add_1; 1 16 16 32 60 
+The predecessors of CPUsubgraph22: NPUsubgraph21; NPUsubgraph8; 
+The successors of CPUsubgraph22: NPUsubgraph22; NPUsubgraph23; 
+CPUsubgraph23: order46
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_5/padded_conv2d_28/conv2d_28/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample_1/padded_conv2d_38/conv2d_38/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_5/padded_conv2d_28/conv2d_28/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_5/padded_conv2d_28/conv2d_28/BiasAdd/ReadVariableOp; 1 16 16 640 model_1/bk_tiny_lcmu_net_model/res_block_5/strided_slice1; 1 1 1 640 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block_5/group_normalization_16/Shape; 4 model_1/bk_tiny_lcmu_net_model/res_block_5/group_normalization_16/batchnorm/add_1; 1 16 16 32 20 
+The predecessors of CPUsubgraph23: NPUsubgraph22; CPUsubgraph1; 
+The successors of CPUsubgraph23: NPUsubgraph23; 
+CPUsubgraph24: order48
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_5/add_1; 1 16 16 640 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_5/group_normalization_17/Reshape_3; 1 16 16 640 
+The predecessors of CPUsubgraph24: NPUsubgraph23; 
+The successors of CPUsubgraph24: NPUsubgraph24; 
+CPUsubgraph25: order50
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_5/Reshape; 1 256 640 model_1/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_11/Reshape_4; 1 80 77 model_1/bk_tiny_lcmu_net_model/spatial_transformer_5/basic_transformer_block_5/cross_attention_11/Reshape_7; 1 77 80 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_5/Reshape_1; 1 16 16 640 
+The predecessors of CPUsubgraph25: NPUsubgraph24; CPUsubgraph3; 
+The successors of CPUsubgraph25: NPUsubgraph25; 
+CPUsubgraph26: order52
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_5/padded_conv2d_32/conv2d_32/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample_1/padded_conv2d_38/conv2d_38/Conv2D;model_1/bk_tiny_lcmu_net_model/spatial_transformer_5/padded_conv2d_32/conv2d_32/Conv2D;model_1/bk_tiny_lcmu_net_model/spatial_transformer_5/padded_conv2d_32/conv2d_32/BiasAdd/ReadVariableOp; 1 16 16 640 model_1/bk_tiny_lcmu_net_model/res_block_5/add_1; 1 16 16 640 model_1/bk_tiny_lcmu_net_model/downsample/padded_conv2d_5/conv2d_5/BiasAdd;model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/padded_conv2d_48/conv2d_48/Conv2D;model_1/bk_tiny_lcmu_net_model/downsample/padded_conv2d_5/conv2d_5/Conv2D;model_1/bk_tiny_lcmu_net_model/downsample/padded_conv2d_5/conv2d_5/BiasAdd/ReadVariableOp; 1 16 16 320 
+--output-name model_1/bk_tiny_lcmu_net_model/concat_3; 1 16 16 960 model_1/bk_tiny_lcmu_net_model/res_block_6/group_normalization_18/Shape; 4 model_1/bk_tiny_lcmu_net_model/res_block_6/group_normalization_18/batchnorm/add_1; 1 16 16 32 30 
+The predecessors of CPUsubgraph26: NPUsubgraph25; NPUsubgraph23; NPUsubgraph4; 
+The successors of CPUsubgraph26: NPUsubgraph26; NPUsubgraph27; 
+CPUsubgraph27: order54
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_6/padded_conv2d_33/conv2d_33/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample_1/padded_conv2d_38/conv2d_38/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_6/padded_conv2d_33/conv2d_33/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_6/padded_conv2d_33/conv2d_33/BiasAdd/ReadVariableOp; 1 16 16 640 model_1/bk_tiny_lcmu_net_model/res_block_6/strided_slice3; 1 1 1 640 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block_6/group_normalization_19/Shape; 4 model_1/bk_tiny_lcmu_net_model/res_block_6/group_normalization_19/batchnorm/add_1; 1 16 16 32 20 
+The predecessors of CPUsubgraph27: NPUsubgraph26; CPUsubgraph1; 
+The successors of CPUsubgraph27: NPUsubgraph27; 
+CPUsubgraph28: order56
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_6/add_1; 1 16 16 640 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_6/group_normalization_20/Reshape_3; 1 16 16 640 
+The predecessors of CPUsubgraph28: NPUsubgraph27; 
+The successors of CPUsubgraph28: NPUsubgraph28; 
+CPUsubgraph29: order58
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_6/Reshape; 1 256 640 model_1/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_13/Reshape_4; 1 80 77 model_1/bk_tiny_lcmu_net_model/spatial_transformer_6/basic_transformer_block_6/cross_attention_13/Reshape_7; 1 77 80 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_6/Reshape_1; 1 16 16 640 
+The predecessors of CPUsubgraph29: NPUsubgraph28; CPUsubgraph3; 
+The successors of CPUsubgraph29: NPUsubgraph29; 
+CPUsubgraph30: order60
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_6/padded_conv2d_37/conv2d_37/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample_1/padded_conv2d_38/conv2d_38/Conv2D;model_1/bk_tiny_lcmu_net_model/spatial_transformer_6/padded_conv2d_37/conv2d_37/Conv2D;model_1/bk_tiny_lcmu_net_model/spatial_transformer_6/padded_conv2d_37/conv2d_37/BiasAdd/ReadVariableOp; 1 16 16 640 model_1/bk_tiny_lcmu_net_model/res_block_6/add_1; 1 16 16 640 
+--output-name model_1/bk_tiny_lcmu_net_model/upsample_1/up_sampling2d_1/resize/ResizeNearestNeighbor; 1 32 32 640 
+The predecessors of CPUsubgraph30: NPUsubgraph29; NPUsubgraph27; 
+The successors of CPUsubgraph30: NPUsubgraph30; 
+CPUsubgraph31: order62
+--input-name model_1/bk_tiny_lcmu_net_model/upsample_1/padded_conv2d_38/conv2d_38/BiasAdd;model_1/bk_tiny_lcmu_net_model/upsample_1/padded_conv2d_38/conv2d_38/Conv2D;model_1/bk_tiny_lcmu_net_model/upsample_1/padded_conv2d_38/conv2d_38/BiasAdd/ReadVariableOp; 1 32 32 640 model_1/bk_tiny_lcmu_net_model/spatial_transformer/add; 1 32 32 320 
+--output-name model_1/bk_tiny_lcmu_net_model/concat_4; 1 32 32 960 model_1/bk_tiny_lcmu_net_model/res_block_7/group_normalization_21/Shape; 4 model_1/bk_tiny_lcmu_net_model/res_block_7/group_normalization_21/batchnorm/add_1; 1 32 32 32 30 
+The predecessors of CPUsubgraph31: NPUsubgraph30; NPUsubgraph4; 
+The successors of CPUsubgraph31: NPUsubgraph31; NPUsubgraph32; 
+CPUsubgraph32: order64
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_7/padded_conv2d_39/conv2d_39/BiasAdd;model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/padded_conv2d_48/conv2d_48/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_7/padded_conv2d_39/conv2d_39/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_7/padded_conv2d_39/conv2d_39/BiasAdd/ReadVariableOp; 1 32 32 320 model_1/bk_tiny_lcmu_net_model/res_block_7/strided_slice1; 1 1 1 320 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block_7/group_normalization_22/Shape; 4 model_1/bk_tiny_lcmu_net_model/res_block_7/group_normalization_22/batchnorm/add_1; 1 32 32 32 10 
+The predecessors of CPUsubgraph32: NPUsubgraph31; CPUsubgraph1; 
+The successors of CPUsubgraph32: NPUsubgraph32; 
+CPUsubgraph33: order66
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_7/add_1; 1 32 32 320 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_7/group_normalization_23/Reshape_3; 1 32 32 320 
+The predecessors of CPUsubgraph33: NPUsubgraph32; 
+The successors of CPUsubgraph33: NPUsubgraph33; 
+CPUsubgraph34: order68
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_7/Reshape; 1 1024 320 model_1/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_15/Reshape_4; 1 40 77 model_1/bk_tiny_lcmu_net_model/spatial_transformer_7/basic_transformer_block_7/cross_attention_15/Reshape_7; 1 77 40 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_7/Reshape_1; 1 32 32 320 
+The predecessors of CPUsubgraph34: NPUsubgraph33; CPUsubgraph3; 
+The successors of CPUsubgraph34: NPUsubgraph34; 
+CPUsubgraph35: order70
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_7/padded_conv2d_43/conv2d_43/BiasAdd;model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/padded_conv2d_48/conv2d_48/Conv2D;model_1/bk_tiny_lcmu_net_model/spatial_transformer_7/padded_conv2d_43/conv2d_43/Conv2D;model_1/bk_tiny_lcmu_net_model/spatial_transformer_7/padded_conv2d_43/conv2d_43/BiasAdd/ReadVariableOp; 1 32 32 320 model_1/bk_tiny_lcmu_net_model/res_block_7/add_1; 1 32 32 320 model_1/bk_tiny_lcmu_net_model/padded_conv2d/conv2d/BiasAdd;model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/padded_conv2d_48/conv2d_48/Conv2D;model_1/bk_tiny_lcmu_net_model/padded_conv2d/conv2d/Conv2D;model_1/bk_tiny_lcmu_net_model/padded_conv2d/conv2d/BiasAdd/ReadVariableOp; 1 32 32 320 
+--output-name model_1/bk_tiny_lcmu_net_model/concat_5; 1 32 32 640 model_1/bk_tiny_lcmu_net_model/res_block_8/group_normalization_24/Shape; 4 model_1/bk_tiny_lcmu_net_model/res_block_8/group_normalization_24/batchnorm/add_1; 1 32 32 32 20 
+The predecessors of CPUsubgraph35: NPUsubgraph34; NPUsubgraph32; NPUsubgraph0; 
+The successors of CPUsubgraph35: NPUsubgraph35; NPUsubgraph36; 
+CPUsubgraph36: order72
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_8/padded_conv2d_44/conv2d_44/BiasAdd;model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/padded_conv2d_48/conv2d_48/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_8/padded_conv2d_44/conv2d_44/Conv2D;model_1/bk_tiny_lcmu_net_model/res_block_8/padded_conv2d_44/conv2d_44/BiasAdd/ReadVariableOp; 1 32 32 320 model_1/bk_tiny_lcmu_net_model/res_block_8/strided_slice1; 1 1 1 320 
+--output-name model_1/bk_tiny_lcmu_net_model/res_block_8/group_normalization_25/Shape; 4 model_1/bk_tiny_lcmu_net_model/res_block_8/group_normalization_25/batchnorm/add_1; 1 32 32 32 10 
+The predecessors of CPUsubgraph36: NPUsubgraph35; CPUsubgraph1; 
+The successors of CPUsubgraph36: NPUsubgraph36; 
+CPUsubgraph37: order74
+--input-name model_1/bk_tiny_lcmu_net_model/res_block_8/add_1; 1 32 32 320 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/group_normalization_26/Reshape_3; 1 32 32 320 
+The predecessors of CPUsubgraph37: NPUsubgraph36; 
+The successors of CPUsubgraph37: NPUsubgraph37; 
+CPUsubgraph38: order76
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/Reshape; 1 1024 320 model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_17/Reshape_4; 1 40 77 model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/basic_transformer_block_8/cross_attention_17/Reshape_7; 1 77 40 
+--output-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/Reshape_1; 1 32 32 320 
+The predecessors of CPUsubgraph38: NPUsubgraph37; CPUsubgraph3; 
+The successors of CPUsubgraph38: NPUsubgraph38; 
+CPUsubgraph39: order78
+--input-name model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/padded_conv2d_48/conv2d_48/BiasAdd;model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/padded_conv2d_48/conv2d_48/Conv2D;model_1/bk_tiny_lcmu_net_model/spatial_transformer_8/padded_conv2d_48/conv2d_48/BiasAdd/ReadVariableOp; 1 32 32 320 model_1/bk_tiny_lcmu_net_model/res_block_8/add_1; 1 32 32 320 
+--output-name model_1/bk_tiny_lcmu_net_model/group_normalization_27/Shape; 4 model_1/bk_tiny_lcmu_net_model/group_normalization_27/batchnorm/add_1; 1 32 32 32 10 
+The predecessors of CPUsubgraph39: NPUsubgraph38; NPUsubgraph36; 
+The successors of CPUsubgraph39: NPUsubgraph39; 
